@@ -72,6 +72,12 @@
     "sizes": "750x1334",
     "type": "image/jpg",
     "label": "Aba de filmes"
+  },
+    {
+    "src": "https://raw.githubusercontent.com/igcardoso/playflix-os-v1.1/main/.github/Screenshot_2023-03-09-08-33-05-216_com.android.chrome.jpg",
+    "sizes": "750x1334",
+    "type": "image/jpg",
+    "label": "Play do Filme"
   }
   ],
   "related_applications": [{
