@@ -17,7 +17,7 @@
   width: 30px;
   height: 30px;
   margin: 300px auto 0;
-  animation: spiner.9s linear infinite;
+  animation: spiner .9s linear infinite;
 }
 
 #loading .loading .point {
