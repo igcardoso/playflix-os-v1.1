@@ -149,6 +149,12 @@
   margin: 0;
 }
 
+#ads_protection.active #ads_protectionBx {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
 
 @keyframes orientation_alert {
   0% {
