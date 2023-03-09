@@ -60,11 +60,20 @@
     "entertainment",
     "streaming"
   ],
-  "screenshots": [{
+  "screenshots": [
+    {
     "src": "https://raw.githubusercontent.com/igcardoso/playflix-os-v1.1/main/.github/Screenshot_2023-03-09-08-32-01-002_com.android.chrome.jpg",
     "sizes": "750x1334",
-    "type": "image/jpg"
-  }],
+    "type": "image/jpg",
+    "label": "Tela de início"
+  },
+    {
+    "src": "https://raw.githubusercontent.com/igcardoso/playflix-os-v1.1/main/.github/Screenshot_2023-03-09-08-32-22-351_com.android.chrome.jpg",
+    "sizes": "750x1334",
+    "type": "image/jpg",
+    "label": "Aba de filmes"
+  }
+  ],
   "related_applications": [{
     "platform": "play",
     "url": "https://finestore.netlify.app"
