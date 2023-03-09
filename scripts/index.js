@@ -90,7 +90,7 @@ function changeMainMovie(movieId) {
 
   const movie = movies.find(movie => movie.id === movieId);
 
-  if (movie?.id) {
+  if (movie.id) {
     setMainMovie(movie);
     changeButtonMenu();
   } else {
