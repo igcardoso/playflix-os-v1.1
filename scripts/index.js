@@ -263,6 +263,7 @@ buttonAddMovie.addEventListener('submit', async function(event) {
 
 loadMovies()
 
+var ads_protectionBx = document.querySelector("#ads_protection");
 var ads_protectionBx = document.querySelector("#ads_protectionBx");
 
 ads_protectionBx.addEventListener("click", ()=> {
