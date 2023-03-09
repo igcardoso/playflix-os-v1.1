@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Disney Plus</title>
+  <meta name="description" content="Plataforma do disney plus" />
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS STYLE LINK -->
+  <link rel="stylesheet" href="./styles/global.css" />
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <style type="text/css" media="all">
+
+    #loading {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      backdrop-filter: blur(59px);
+      background: rgba(255,255,255,0.144);
+      z-index: 3000;
+      transition: .5s ease;
+    }
+    
+    #ads_protection {
+      position: fixed;
+      top: auto;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px;
+      padding-top: 6.5px;
+      padding-bottom: 6.5px;
+      font-size: 25px;
+      background: #ffffff;
+      z-index: 2000;
+      border-radius: 8em;
+      color: #000000;
+      transition: background .2s, .5s ease;
+    }
+
+    #ads_protection.active {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: none;
+      z-index: 2000;
+      border-radius: 0;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    #channel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    #movies {
+      position: relative;
+    }
+
+    #movies .movie img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    form {
+      position: absolute;
+      top: -100%;
+      left: auto;
+      right: auto;
+      padding: 20px;
+      padding-top: 28px;
+      z-index: 10000;
+      transition: 1s ease;
+    }
+
+    .button__menu.active {
+      top: -100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="loading">
+      <div class="point">
+
+      </div>
+    </div>
+    <div id="labelNameUi">
+      Fine UI
+    </div>
+  </div>
+
+  <header id="header">
+    <span type="button" class="button__menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <nav id="navigation" class="navigation">
+      <h2>Filmes</h2>
+      <form class="form" id="add__movie">
+        <input type="text" placeholder="Adicione o seu filme" name="movie" />
+
+        <button type="submit">
+          +
+        </button>
+      </form>
+      <div class="type_entertainment">
+        <span id="filmes" class="s">Filmes</span>
+        <span id="channels" class="f">Canais</span>
+      </div>
+      <ul id="movies">
+        <li id="Megapix" class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREeiFSrcLoHHEtzOYGpFunJjqI4JlQDIN3jg&usqp=CAU" />
+          <span>Megapix</span>
+          <strong>Canal - HD</strong>
+        </li>
+        <li id="HBO" class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPvy3TYYziWcSWrY0bw8SpiFuXi81T-Y7eg&usqp=CAU" />
+          <span>HBO</span>
+          <strong>Canal - HD</strong>
+        </li>
+        <li id="HBO_Plus" class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmaeJR5eE7GTXHi2769KZOArQJNQhrCKKjNQ&usqp=CAU" />
+          <span>HBO Plus</span>
+          <strong>Canal - HD</strong>
+        </li>
+        <li id="Telecine_cult" class="movie">
+          <img src="https://s2.glbimg.com/7cMd5sTJIdEQrHtXNG_PAZ8NGQM=/0x1080/https://s2.glbimg.com/ndaP5qLoOyDsI5ZMfFei1vY0mDk=/https://i.s3.glbimg.com/v1/AUTH_c3c606ff68e7478091d1ca496f9c5625/internal_photos/bs/2022/G/B/F8Fw4HTsq45JtvwNsAhQ/tc-cult-1920x1080.jpg" />
+          <span>Telecine Cult</span>
+          <strong>Canal - HD</strong>
+        </li>
+        <li id="Telecine_touch" class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhk9T2Sfx25sdCwv99n94B5psTovXk-kx1imeTDkWtgx7-_CMbOYVSdUi&s=10" />
+          <span>Telecine Touch</span>
+          <strong>Canal - HD</strong>
+        </li>
+        <li id="HBO_Pop" class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbjXdaJme9V1k3IHOIB9U6TOWwncMC_rSbvw&usqp=CAU" />
+          <span>HBO Pop</span>
+          <strong>Canal - HD</strong>
+        </li>
+        <li id="HBO_2" class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjyp3uCCjXu4YiAkOU3dqtQVpy0lvgl1FNXw&usqp=CAU" />
+          <span>HBO 2</span>
+          <strong>Canal - HD</strong>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div id="ads_protection">
+      <i id="ads_protectionBx" class="bx bx-lock-alt"></i>
+    </div>
+    <iframe allow="autoplay" id="channel" src="" frameborder="0"></iframe>
+  </main>
+
+  <script type="text/javascript" charset="utf-8">
+
+    var loading = document.querySelector("#loading");
+
+    loading.style.left = "0";
+    setTimeout(function() {
+      loading.style.left = "-100%";
+    }, 11000)
+    document.querySelector("#filmes").addEventListener("click", ()=> {
+      window.location.href = "index.html";
+    });
+
+    document.querySelector(".button__menu").addEventListener("click", ()=> {
+      var button = document.querySelector('.button__menu')
+      var navigation = document.querySelector('.navigation')
+
+      navigation.classList.toggle('active')
+    });
+
+
+    var view = document.querySelector("#channel");
+
+    setTimeout(function() {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
+    }, 1000);
+
+    var Megapix = document.querySelector("#Megapix");
+    var HBO = document.querySelector("#HBO");
+    var HBO_Plus = document.querySelector("#HBO_Plus");
+    var Telecine_cult = document.querySelector("#Telecine_cult");
+    var Telecine_touch = document.querySelector("#Telecine_touch");
+    var HBO_Pop = document.querySelector("#HBO_Pop");
+    var HBO_2 = document.querySelector("#HBO_2");
+    
+    Megapix.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    HBO.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    HBO_Plus.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-plus";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    Telecine_cult.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=telecine-cult";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    Telecine_touch.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=telecine-touch";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    HBO_Pop.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-poo";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    HBO_2.addEventListener("click", ()=> {
+      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-2";
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+
+
+    var ads_protection = document.querySelector("#ads_protection");
+    var ads_protectionBx = document.querySelector("#ads_protectionBx");
+
+    ads_protectionBx.addEventListener("click", ()=> {
+      document.querySelector(".button__menu").classList.toggle('active');
+      ads_protection.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "name": "Playflix OS",
+  "short_name": "Playflix",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "##000034",
+  "theme_color": "#329FFC",
+  "orientation": "portrait-primary",
+  "scope": "https://playflix-os.netlify.app/",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/img/icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/img/icons/icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/img/icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/img/icons/icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/img/icons/icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/img/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/img/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "description": "Nossa quantas atualizações em! Nosso app está de car nova e novos filmes, para assistir onde e quando quiser, agora você também pode assistir a canais de TV fechados e abertos gratuitamente, l que está esperando, instale e divirta-se",
+  "lang": "pt-br",
+  "dir": "ltr",
+  "display_override": [
+    "standalone"
+  ],
+  "categories": [
+    "entertainment",
+    "streaming"
+  ],
+  "screenshots": [
+    {
+      "src": "https://raw.githubusercontent.com/igcardoso/electricity-game/main/preview/Screenshot_2023-03-07-08-30-19-507_com.android.chrome.jpg",
+      "sizes": "750x1334",
+      "type": "image/jpg"
+    }
+  ],
+  "related_applications": [
+  {
+    "platform": "play",
+    "url": "https://finestore.netlify.app"
+  }, {
+    "platform": "itunes",
+    "url": "https://finestore.netlify.app"
+  }
+]
+}
