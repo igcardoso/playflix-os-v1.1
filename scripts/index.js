@@ -31,7 +31,7 @@ function setMainMovie(movie) {
   const description = document.querySelector('.feature__movie p');
   const info = document.querySelector('.feature__movie span');
   const showButton = document.querySelector('.feature__movie .playFilm');
-  const rating = document.querySelector(".rating");
+  const rating = document.querySelector(".rating strong");
 
   const idFilm = movie.id;
   showButton.addEventListener("click", ()=> {
