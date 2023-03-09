@@ -3,7 +3,7 @@
   "short_name": "PlayflixOS",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0d0051",
+  "background_color": "#000000",
   "theme_color": "#0c11ff",
   "orientation": "any",
   "scope": "https://infinex-os.netlify.app/",
