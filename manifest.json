@@ -6,6 +6,8 @@
   "background_color": "#0d0051",
   "theme_color": "#0c11ff",
   "orientation": "any",
+  "scope": "https://infinex-os.netlify.app/",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/images/icons/icon-72x72.png",
@@ -47,5 +49,27 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "description": "O playflix está de cara nova, agora utilizamos api imdb e embed com automatização parcial, obtendo uma rapidez ainda maior na adição de filmes, o que você está esperando, instale nossa pwa e assista a filmes e canais de TV online.",
+  "lang": "pt-br",
+  "dir": "ltr",
+  "display_override": [
+    "standalone"
+  ],
+  "categories": [
+    "entertainment",
+    "streaming"
+  ],
+  "screenshots": [{
+    "src": "https://raw.githubusercontent.com/igcardoso/app-da-sala-1-TI-b/main/images/preview/Screenshot_2022-12-24-22-39-58-564_io.kodular.Ioliveiracardoso76.Multiplex.jpg",
+    "sizes": "750x1334",
+    "type": "image/jpg"
+  }],
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://finestore.netlify.app"
+  }, {
+    "platform": "itunes",
+    "url": "https://finestore.netlify.app"
+  }]
 }
