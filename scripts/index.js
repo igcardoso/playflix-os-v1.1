@@ -185,13 +185,6 @@ function loadMovies() {
     'tt6443346',
     'tt12801262',
     'tt1037705',
-    'tt6760876',
-    'tt1399683',
-    'tt11286314',
-    'tt6751668',
-    'tt10381014',
-    'tt9465600',
-    'tt1131724',
     'tt2134170',
     'tt8750570',
     'tt0108670',
@@ -208,17 +201,8 @@ function loadMovies() {
     'tt6751668',
     'tt10381014',
     'tt9465600',
-    'tt1131724',
-    'tt2134170',
-    'tt8750570',
-    'tt0108670',
-    'tt0092086',
-    'tt0078718',
-    'tt0026393',
-    'tt0681784',
-    'tt7515456',
-    'tt6445414',
-    'tt9421570']
+    'tt1131724'
+    ]
 
   LIST_MOVIES.map(async (movie, index) => {
     const movieData = await getMovieData(movie)
