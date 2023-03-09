@@ -48,11 +48,12 @@ function setMainMovie(movie) {
       loading.style.left = "-100%";
       marker_contention.addEventListener("click", ()=> {
         orientation_alert.style.transform = "translateY(-100%)";
-      document.querySelector(".orientation_video").pause();
-      
+        document.querySelector(".orientation_video").pause();
+
       });
 
       backPageFilm.addEventListener("click", ()=> {
+        document.querySelector(".orientation_video").pause();
         locationMovies.src = "";
         pageFilm.style.display = "none";
         document.querySelector("#app").style.display = "flex";
