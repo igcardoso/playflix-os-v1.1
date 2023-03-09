@@ -148,7 +148,7 @@ async function getMovieData(movieId) {
 
       const movieData = {
         id: movieId,
-        title: movie.id,
+        title: data.title,
         overview: data.overview,
         vote_average: data.vote_average,
         genre: data.genres[0].name,
