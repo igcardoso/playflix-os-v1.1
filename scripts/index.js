@@ -71,7 +71,7 @@ function setMainMovie(movie) {
   info.innerHTML = movie.release + ' - ' + movie.genre + ' - Filme';
 
   appImage.setAttribute('src',
-    movie.trailer);
+    movie..image.original);
 }
 
 function changeMovieActiveInList(newMovieActive) {
