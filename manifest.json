@@ -1,13 +1,11 @@
 {
   "name": "Playflix OS",
-  "short_name": "Playflix",
+  "short_name": "PlayflixOS",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "##000034",
-  "theme_color": "#329FFC",
-  "orientation": "any",
-  "scope": "https://playflix-os.netlify.app/",
-  "prefer_related_applications": false,
+  "background_color": "#ffffff",
+  "theme_color": "#6200e2",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/img/icons/icon-72x72.png",
@@ -49,31 +47,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "description": "Nossa quantas atualizações em! Nosso app está de car nova e novos filmes, para assistir onde e quando quiser, agora você também pode assistir a canais de TV fechados e abertos gratuitamente, l que está esperando, instale e divirta-se",
-  "lang": "pt-br",
-  "dir": "ltr",
-  "display_override": [
-    "standalone"
-  ],
-  "categories": [
-    "entertainment",
-    "streaming"
-  ],
-  "screenshots": [
-    {
-      "src": "https://raw.githubusercontent.com/igcardoso/electricity-game/main/preview/Screenshot_2023-03-07-08-30-19-507_com.android.chrome.jpg",
-      "sizes": "750x1334",
-      "type": "image/jpg"
-    }
-  ],
-  "related_applications": [
-  {
-    "platform": "play",
-    "url": "https://finestore.netlify.app"
-  }, {
-    "platform": "itunes",
-    "url": "https://finestore.netlify.app"
-  }
-]
+  ]
 }
