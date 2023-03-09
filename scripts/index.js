@@ -35,6 +35,7 @@ function setMainMovie(movie) {
 
   const idFilm = movie.id;
   showButton.addEventListener("click", ()=> {
+    document.querySelector(".orientation_video").play();
     var pageFilm = document.querySelector("#pageFilm");
     var loading = document.querySelector("#loading");
     var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
@@ -47,6 +48,8 @@ function setMainMovie(movie) {
       loading.style.left = "-100%";
       marker_contention.addEventListener("click", ()=> {
         orientation_alert.style.transform = "translateY(-100%)";
+      document.querySelector(".orientation_video").pause();
+      
       });
 
       backPageFilm.addEventListener("click", ()=> {
