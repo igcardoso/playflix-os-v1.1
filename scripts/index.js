@@ -211,7 +211,8 @@ function loadMovies() {
     'tt0195099',
     'tt9421570',
     'tt1649418',
-    'tt2948372'
+    'tt2948372',
+    'tt3915174'
   ]
 
   LIST_MOVIES.map(async (movie, index) => {
