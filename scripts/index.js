@@ -277,5 +277,5 @@ var submitSearch = document.querySelector("#submitSearch");
 submitSearch.addEventListener("click", ()=> {
   // event.preventDefault()
   var searchInput = document.querySelector('name=searchInput').value;
-  submitSearch.href = "#" + searchInput
+  submitSearch.href = searchInput
 });
