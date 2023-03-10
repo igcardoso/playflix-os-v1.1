@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Channel page control</title>
   <style type="text/css" media="all">
+    body {
+      background-image: url('https://image.tmdb.org/t/p/original/ox4goZd956BxqJH6iLwhWPL9ct4.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: repeat-x;
+    }
+
     .movie {
       display: flex;
       flex-direction: column;
@@ -49,7 +56,7 @@
       transform: translateY(40px);
       transition: all 0.6s;
     }
-    
+
     .movie img {
       position: absolute;
       top: 0;
@@ -63,20 +70,21 @@
       opacity: 1;
       transform: translateY(0);
     }
-    
+
     form {
       display: flex
       flex-direction: column;
       width: 100%;
       text-align: center;
     }
-    
+
     form input {
       width: 90%;
       padding: 10px;
       border-radius: 1em;
       border: 0;
       outline: none;
+      background: hsla(0,0%,100%,0.192);
     }
 
   </style>
@@ -90,66 +98,66 @@
 
     </div>
   </main>
-    <div class="idEspecifico">
+  <div class="idEspecifico">
 
-    </div>
-    <form id="form">
-      <input placeholder="Nome" type="text" name="name" />
-      <input placeholder="link" type="text" name="link" value="https://tv.appmj.xyz/tv.php?canal=" />
-      <input placeholder="qualidade" type="text" name="quality" value="HD" />
-      <input placeholder="imagem" type="text" name="image" />
-      <input placeholder="tipo ex:esportes" type="text" name="type" />
-      <input type="submit">
-    </form>
-    <div id="movies">
+  </div>
+  <form id="form">
+    <input placeholder="Nome" type="text" name="name" />
+    <input placeholder="link" type="text" name="link" value="https://tv.appmj.xyz/tv.php?canal=" />
+    <input placeholder="qualidade" type="text" name="quality" value="HD" />
+    <input placeholder="imagem" type="text" name="image" />
+    <input placeholder="tipo ex:esportes" type="text" name="type" />
+    <input type="submit">
+  </form>
+  <div id="movies">
 
-    </div>
+  </div>
 
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
-    <!-- Add additional services that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
-    <!-- Inicializa o firebase -->
-    <script>
-      var config = {
-        apiKey: "AIzaSyDZmkmi8qstIfuJ6il-uAfM8wqPFGNeQOI",
-        authDomain: "playflix-os.firebaseapp.com",
-        projectId: "playflix-os",
-        storageBucket: "playflix-os.appspot.com",
-        messagingSenderId: "974391976020",
-        appId: "1:974391976020:web:f4d56ca28c548c452e0dc1",
-        measurementId: "G-M1BGZ38TDV"
-      };
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <!-- Inicializa o firebase -->
+  <script>
+    var config = {
+      apiKey: "AIzaSyDZmkmi8qstIfuJ6il-uAfM8wqPFGNeQOI",
+      authDomain: "playflix-os.firebaseapp.com",
+      projectId: "playflix-os",
+      storageBucket: "playflix-os.appspot.com",
+      messagingSenderId: "974391976020",
+      appId: "1:974391976020:web:f4d56ca28c548c452e0dc1",
+      measurementId: "G-M1BGZ38TDV"
+    };
 
-      firebase.initializeApp(config);
-      // Apenas para remover um warning
-      firebase.firestore().settings({
-        timestampsInSnapshots: true,
+    firebase.initializeApp(config);
+    // Apenas para remover um warning
+    firebase.firestore().settings({
+      timestampsInSnapshots: true,
 
-      });
+    });
 
-      const db = firebase.firestore()
+    const db = firebase.firestore()
 
-      const form = document.getElementById("form")
+    const form = document.getElementById("form")
 
-      form.addEventListener('submit', (e)=> {
-        e.preventDefault();
-        let name = document.querySelector('[name=name]').value;
-        let link = document.querySelector('[name=link]').value;
-        let quality = document.querySelector('[name=quality]').value;
-        let type = document.querySelector('[name=type]').value;
-        let image = document.querySelector('[name=image]').value;
-        db.collection('channels').add({
-          name: name,
-          link: link,
-          quality: quality,
-          type: type,
-          image: image
-        })
-        alert("inserido com sucesso")
-        form.reset()
+    form.addEventListener('submit', (e)=> {
+      e.preventDefault();
+      let name = document.querySelector('[name=name]').value;
+      let link = document.querySelector('[name=link]').value;
+      let quality = document.querySelector('[name=quality]').value;
+      let type = document.querySelector('[name=type]').value;
+      let image = document.querySelector('[name=image]').value;
+      db.collection('channels').add({
+        name: name,
+        link: link,
+        quality: quality,
+        type: type,
+        image: image
       })
-      /*
+      alert("inserido com sucesso")
+      form.reset()
+    })
+    /*
     form.addEventListener('submit', (e)=> {
       e.preventDefault();
       let texto = document.querySelector('[name=texto]').value;
@@ -164,38 +172,38 @@
       document.querySelector(".idEspecifico").innerHTML = doc.data().photograph
     })*/
 
-      db.collection('channels').onSnapshot((data)=> {
-        let list = document.querySelector('.list');
-        data.docs.map(doc => {
-          console.log("objeto:", doc.data());
-          var channel = document.createElement("li");
-          channel.className = 'movie';
-          channel.id = `${doc.data().name}`;
+    db.collection('channels').onSnapshot((data)=> {
+      let list = document.querySelector('.list');
+      data.docs.map(doc => {
+        console.log("objeto:", doc.data());
+        var channel = document.createElement("li");
+        channel.className = 'movie';
+        channel.id = `${doc.data().name}`;
 
-          var imageChannel = document.createElement("img");
-          imageChannel.src = `${doc.data().image}`;
-          channel.appendChild(imageChannel);
+        var imageChannel = document.createElement("img");
+        imageChannel.src = `${doc.data().image}`;
+        channel.appendChild(imageChannel);
 
-          var nameChannel = document.createElement("span");
-          nameChannel.innerHTML = `${doc.data().name}`;
-          channel.appendChild(nameChannel);
+        var nameChannel = document.createElement("span");
+        nameChannel.innerHTML = `${doc.data().name}`;
+        channel.appendChild(nameChannel);
 
-          var qualityChannel = document.createElement("strong");
-          qualityChannel.innerHTML = `${doc.data().quality}`;
-          channel.appendChild(qualityChannel);
+        var qualityChannel = document.createElement("strong");
+        qualityChannel.innerHTML = `${doc.data().quality}`;
+        channel.appendChild(qualityChannel);
 
-          channel.addEventListener("click", ()=> {
-            var inputChannel = document.querySelector("#channel")
+        channel.addEventListener("click", ()=> {
+          var inputChannel = document.querySelector("#channel")
 
-            inputChannel.src = `${doc.data().link}`;
-          })
+          inputChannel.src = `${doc.data().link}`;
+        })
 
 
-          document.querySelector("#movies").appendChild(channel);
+        document.querySelector("#movies").appendChild(channel);
 
-          return doc.data();
-        });
+        return doc.data();
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
