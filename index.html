@@ -87,8 +87,7 @@
         </form>
         <form class="form2">
           <input type="text" placeholder="Busque com o id do filme, ex: tt9032400" name="search__value" />
-          <button id="submit__search" type="submit">
-           </button>
+          <input id="submit__search" type="submit">
         </form>
         <div class="type_entertainment">
           <span id="filmes" class="f">Filmes</span>
@@ -147,8 +146,6 @@
       timestampsInSnapshots: true,
 
     });
-    
-    document.querySelector("#submit__search").innerHTML = '<i class=""></i>'
 
     const db = firebase.firestore()
     const auth = firebase.auth()
