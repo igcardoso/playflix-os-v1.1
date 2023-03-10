@@ -145,37 +145,37 @@
         <span id="channels" class="f">Canais</span>
       </div>
       <ul id="movies">
-        <li id="Megapix" class="movie">
+        <li id="megapix" class="movie">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREeiFSrcLoHHEtzOYGpFunJjqI4JlQDIN3jg&usqp=CAU" />
           <span>Megapix</span>
           <strong>Canal - HD</strong>
         </li>
-        <li id="HBO" class="movie">
+        <li id="hbo" class="movie">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPvy3TYYziWcSWrY0bw8SpiFuXi81T-Y7eg&usqp=CAU" />
           <span>HBO</span>
           <strong>Canal - HD</strong>
         </li>
-        <li id="HBO_Plus" class="movie">
+        <li id="hbo_plus" class="movie">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmaeJR5eE7GTXHi2769KZOArQJNQhrCKKjNQ&usqp=CAU" />
           <span>HBO Plus</span>
           <strong>Canal - HD</strong>
         </li>
-        <li id="Telecine_cult" class="movie">
+        <li id="telecine_cult" class="movie">
           <img src="https://s2.glbimg.com/7cMd5sTJIdEQrHtXNG_PAZ8NGQM=/0x1080/https://s2.glbimg.com/ndaP5qLoOyDsI5ZMfFei1vY0mDk=/https://i.s3.glbimg.com/v1/AUTH_c3c606ff68e7478091d1ca496f9c5625/internal_photos/bs/2022/G/B/F8Fw4HTsq45JtvwNsAhQ/tc-cult-1920x1080.jpg" />
           <span>Telecine Cult</span>
           <strong>Canal - HD</strong>
         </li>
-        <li id="Telecine_touch" class="movie">
+        <li id="telecine_touch" class="movie">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhk9T2Sfx25sdCwv99n94B5psTovXk-kx1imeTDkWtgx7-_CMbOYVSdUi&s=10" />
           <span>Telecine Touch</span>
           <strong>Canal - HD</strong>
         </li>
-        <li id="HBO_Pop" class="movie">
+        <li id="hbo_pop" class="movie">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbjXdaJme9V1k3IHOIB9U6TOWwncMC_rSbvw&usqp=CAU" />
           <span>HBO Pop</span>
           <strong>Canal - HD</strong>
         </li>
-        <li id="HBO_2" class="movie">
+        <li id="hbo_2" class="movie">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjyp3uCCjXu4YiAkOU3dqtQVpy0lvgl1FNXw&usqp=CAU" />
           <span>HBO 2</span>
           <strong>Canal - HD</strong>
@@ -216,36 +216,31 @@
     setTimeout(function() {
       view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
     }, 1000);
-
-    var Megapix = document.querySelector("#Megapix");
-    var HBO = document.querySelector("#HBO");
-    var HBO_Plus = document.querySelector("#HBO_Plus");
-    var Telecine_cult = document.querySelector("#Telecine_cult");
-    var Telecine_touch = document.querySelector("#Telecine_touch");
+    
     var HBO_Pop = document.querySelector("#HBO_Pop");
     var HBO_2 = document.querySelector("#HBO_2");
     
-    Megapix.addEventListener("click", ()=> {
+    document.querySelector("#megapix").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
       document.querySelector('.navigation').classList.toggle('active');
     });
 
-    HBO.addEventListener("click", ()=> {
+    document.querySelector("#hbo").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=hbo";
       document.querySelector('.navigation').classList.toggle('active');
     });
 
-    HBO_Plus.addEventListener("click", ()=> {
+    document.querySelector("#hbo_plus").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-plus";
       document.querySelector('.navigation').classList.toggle('active');
     });
 
-    Telecine_cult.addEventListener("click", ()=> {
+    document.querySelector("#telecine_cult").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=telecine-cult";
       document.querySelector('.navigation').classList.toggle('active');
     });
 
-    Telecine_touch.addEventListener("click", ()=> {
+    document.querySelector("#telecine_touch").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=telecine-touch";
       document.querySelector('.navigation').classList.toggle('active');
     });
