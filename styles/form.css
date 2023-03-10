@@ -34,7 +34,7 @@
 }
 /* ============= */
 .form2 {
-  display: none /*flex*/;
+  display: flex;
   align-items: stretch;
   column-gap: 24px;
 
