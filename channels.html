@@ -248,6 +248,9 @@ document.addEventListener("DOMContentLoaded", function () {
               channel.className = 'movie';
               channel.id = ${doc.data().name};
               
+              var imageChannel = document.createElement("li");
+              imageChannel.src = ${doc.data().image};
+              
               
               
               document.querySelector("#movies").appendChild(channel);
