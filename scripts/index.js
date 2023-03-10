@@ -247,6 +247,14 @@ function formattedMovieId(movieId) {
 
   return movieId
 }
+
+var search = document.querySelector("#submit__search");
+
+search.addEventListener("click" ()=> {
+  let valueSearch = document.querySelector('name=search__value').value
+  
+  search.href = "#" + valueSearch
+});
   
 buttonAddMovie.addEventListener('submit', async function(event) {
   event.preventDefault()
