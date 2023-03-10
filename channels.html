@@ -240,25 +240,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-          db.collection('comunicados').onSnapshot((data)=> {
+          db.collection('channels').onSnapshot((data)=> {
             data.docs.map(doc => {
               console.log("objeto:",
                 doc.data());
-              var cards = document.createElement("div");
-              cards.className = 'cards';
-              cards.innerHTML = ``;
+              var channel = document.createElement("li");
+              channel.className = 'movie';
+              channel.id = ${doc.data().name};
               
-             var idChannel = "#" + name
-
-              document.querySelector(idChannel).addEventListener("click", ()=> {
-                view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
-                document.querySelector('.navigation').classList.toggle('active');
-              });
-
-
-              // *******************************
-
-              document.querySelector("#containment-card-notifications").appendChild(cards);
+              
+              
+              document.querySelector("#movies").appendChild(channel);
 
               return doc.data();
             });
