@@ -104,36 +104,36 @@ function changeMainMovie(movieId) {
 }
 
 function createButtonMovie(movieId) {
-  const button = document.createElement('button')
-  button.setAttribute('onclick', `changeMainMovie('${movieId}')`)
-  button.innerHTML = '<i style="background: #ffffff; color:#000000 ; border-radius: 8em; font-size:35px; padding:4px;" class="bx bx-play"></i>'
+  const button = document.createElement('button');
+  button.setAttribute('onclick', `changeMainMovie('${movieId}')`);
+  button.innerHTML = '<i style="background: #ffffff; color:#000000 ; border-radius: 8em; font-size:35px; padding:4px;" class="bx bx-play"></i>';
 
-  return button
+  return button;
 }
 
 function createImageMovie(movieImage, movieTitle) {
-  const divImageMovie = document.createElement('div')
-  divImageMovie.classList.add('movie__image')
+  const divImageMovie = document.createElement('div');
+  divImageMovie.classList.add('movie__image');
 
-  const image = document.createElement('img')
+  const image = document.createElement('img');
 
-  image.setAttribute('src', movieImage)
-  image.setAttribute('alt', `Imagem do filme ${movieTitle}`)
-  image.setAttribute('loading', 'lazy')
+  image.setAttribute('src', movieImage);
+  image.setAttribute('alt', `Imagem do filme ${movieTitle}`);
+  image.setAttribute('loading', 'lazy');
 
-  divImageMovie.appendChild(image)
+  divImageMovie.appendChild(image);
 
-  return divImageMovie
+  return divImageMovie;
 }
 
 function addMovieInList(movie) {
-  const movieElement = document.createElement('li')
-  movieElement.classList.add('movie')
+  const movieElement = document.createElement('li');
+  movieElement.classList.add('movie');
 
-  movieElement.setAttribute('id', movie.id)
+  movieElement.setAttribute('id', movie.id);
 
-  const genre = `<span>${movie.genre}</span>`
-  const title = `<strong>${movie.title}</strong>`
+  const genre = `<span>${movie.genre}</span>`;
+  const title = `<strong>${movie.title}</strong>`;
 
   movieElement.innerHTML = genre + title
   movieElement.appendChild(createButtonMovie(movie.id))
