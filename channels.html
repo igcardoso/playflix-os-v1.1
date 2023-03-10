@@ -182,9 +182,6 @@
 
     const db = firebase.firestore()
 
-
-    window.onload = function() {
-
       db.collection('channels').onSnapshot((data)=> {
         data.docs.map(doc => {
           console.log("objeto:",
@@ -211,7 +208,6 @@
           return doc.data();
         });
       })
-    };
 
     var loading = document.querySelector("#loading");
 
