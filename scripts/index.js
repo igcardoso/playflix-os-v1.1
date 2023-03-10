@@ -237,7 +237,7 @@ function loadMovies() {
   })
 }
 
-const buttonAddMovie = document.getElementById('add__movie')
+const buttonAddMovie = document.getElementById('search__movie')
 
 function formattedMovieId(movieId) {
   if (movieId.includes('https://www.imdb.com/title/')) {
@@ -249,16 +249,7 @@ function formattedMovieId(movieId) {
 }
 
 buttonAddMovie.addEventListener('submit', async function(event) {
-  event.preventDefault()
-
-  const newMovieId = formattedMovieId(event.target['movie'].value)
-  const newMovie = await getMovieData(newMovieId)
-
-  if (newMovie?.id) {
-    addMovieInList(newMovie)
-  }
-
-  event.target['movie'].value = ''
+  
 })
 
 loadMovies()
