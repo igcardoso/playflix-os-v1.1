@@ -309,11 +309,10 @@ window.onload = function() {
 
   auth.onAuthStateChanged(user => {
     if (user) {
-      var profile = document.querySelector("nav .containerUser .profile .user img");
-      var nameOfTheStartMarker = document.querySelector(".home .elementsOfHome .head-title .left .breadcrumb li .name");
+      var profile = document.querySelector("#imageUser");
 
       profile.src = user.photoURL
-      nameOfTheStartMarker.innerHTML = "Olá, " + user.displayName
+      
       /*
 
       db.collection('comunicados').onSnapshot((data)=> {
