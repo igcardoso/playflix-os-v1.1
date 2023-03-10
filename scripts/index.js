@@ -248,7 +248,7 @@ function formattedMovieId(movieId) {
   return movieId
 }
 
-buttonAddMovie.addEventListener('submit', 
+buttonAddMovie.addEventListener('submit', let texto = document.querySelector('[name=value__search]').value;
 })
 
 loadMovies()
