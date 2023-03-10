@@ -199,25 +199,18 @@
             doc.data());
           var channel = document.createElement("li");
           channel.className = 'movie';
-          channel.id = $ {
-            doc.data().name
-          };
+          channel.id = ${doc.data().name};
 
           var imageChannel = document.createElement("img");
-          imageChannel.src = ${
-            doc.data().image};
+          imageChannel.src = ${doc.data().image};
           channel.appendChild(imageChannel);
 
           var nameChannel = document.createElement("span");
-          nameChannel.innerHTML = $ {
-            doc.data().name
-          };
+          nameChannel.innerHTML = ${doc.data().name};
           channel.appendChild(nameChannel);
 
           var qualityChannel = document.createElement("strong");
-          qualityChannel.innerHTML = $ {
-            doc.data().quality
-          };
+          qualityChannel.innerHTML = ${doc.data().quality};
           channel.appendChild(qualityChannel);
 
 
