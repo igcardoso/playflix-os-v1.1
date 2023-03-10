@@ -276,7 +276,7 @@ var searchForm = document.querySelector("#searchForm");
 var submitSearch = document.querySelector("#submitSearch");
 
 submitSearch.addEventListener("click", ()=> {
-  event.preventDefault() 
+  // event.preventDefault()
   var searchInput = document.querySelector('name=searchInput').value;
   submitSearch.href = "#" + searchInput
 });
