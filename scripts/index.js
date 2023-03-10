@@ -250,7 +250,7 @@ function formattedMovieId(movieId) {
 }
 
 search__movie.addEventListener('submit', async function(event) {
-  
+  let valueSearch = document.querySelector('[name=valueSearch]').value;
 }
 
 buttonAddMovie.addEventListener('submit', async function(event) {
