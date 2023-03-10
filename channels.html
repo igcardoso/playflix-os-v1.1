@@ -217,8 +217,6 @@
       view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
     }, 1000);
     
-    var HBO_Pop = document.querySelector("#HBO_Pop");
-    var HBO_2 = document.querySelector("#HBO_2");
     
     document.querySelector("#megapix").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
@@ -245,12 +243,12 @@
       document.querySelector('.navigation').classList.toggle('active');
     });
 
-    HBO_Pop.addEventListener("click", ()=> {
+    document.querySelector("#hbo_pop").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-poo";
       document.querySelector('.navigation').classList.toggle('active');
     });
 
-    HBO_2.addEventListener("click", ()=> {
+    document.querySelector("#hbo_2").addEventListener("click", ()=> {
       view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-2";
       document.querySelector('.navigation').classList.toggle('active');
     });
