@@ -220,7 +220,11 @@
         data.docs.map(doc => {
           console.log("objeto:",
             doc.data());
-          
+          var channel = document.createElement("li");
+          channel.className = 'movie';
+          channel.id = ${doc.data().name};
+
+          document.querySelector("#movies").appendChild(channel);
 
           return doc.data();
         });
