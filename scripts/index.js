@@ -273,8 +273,9 @@ ads_protectionBx.addEventListener("click", ()=> {
 });
 
 var submitSearch = document.querySelector("#submitSearch");
+var buttonSubmitSearch = document.querySelector("#buttonSubmitSearch");
 
-submitSearch.addEventListener("click", ()=> {
+buttonSubmitSearch.addEventListener("click", ()=> {
   // event.preventDefault()
   var searchInput = document.querySelector('name=searchInput').value;
   submitSearch.href = "#" + searchInput
