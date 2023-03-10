@@ -227,21 +227,7 @@
             });
           });
 
-        } else {
-          var provider = new firebase.auth.GoogleAuthProvider();
-
-          firebase.auth().signInWithRedirect(provider).then(resposta => {
-            if (resposta.credential) {
-              const token = resposta.credential.accessToken;
-            }
-            const user = resposta.user;
-          }).catch(error => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.email;
-            const credential = error.credential;
-          });
-        }
+        } 
       });
     };
 
