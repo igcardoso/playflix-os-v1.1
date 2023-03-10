@@ -202,7 +202,9 @@
         channel.appendChild(qualityChannel);
         
         channel.addEventListener("click", ()=> {
-          var inputChannel = `${doc.data().link}` + `${doc.data().name}`
+          var inputChannel = document.querySelector("#channel")
+          
+        inputChannel.src = `${doc.data().link}` + `${doc.data().name}`
         })
 
 
