@@ -182,96 +182,31 @@
 
     const db = firebase.firestore()
     db.collection('channels').onSnapshot((data)=> {
-            data.docs.map(doc => {
-              console.log("objeto:",
-                doc.data());
-              var channel = document.createElement("li");
-              channel.className = 'movie';
-              channel.id = `${doc.data().name}`;
+      data.docs.map(doc => {
+        console.log("objeto:",
+          doc.data());
+        var channel = document.createElement("li");
+        channel.className = 'movie';
+        channel.id = `${doc.data().name}`;
 
-              var imageChannel = document.createElement("img");
-              imageChannel.src = `${doc.data().image}`;
-              channel.appendChild(imageChannel);
+        var imageChannel = document.createElement("img");
+        imageChannel.src = `${doc.data().image}`;
+        channel.appendChild(imageChannel);
 
-              var nameChannel = document.createElement("span");
-              nameChannel.innerHTML = `${doc.data().name}`;
-              channel.appendChild(nameChannel);
+        var nameChannel = document.createElement("span");
+        nameChannel.innerHTML = `${doc.data().name}`;
+        channel.appendChild(nameChannel);
 
-              var qualityChannel = document.createElement("strong");
-              qualityChannel.innerHTML = `${doc.data().quality}`;
-              channel.appendChild(qualityChannel);
-
-
-              document.querySelector("#movies").appendChild(channel);
-
-              return doc.data();
-            });
-          });
-          
-    /*
-    const auth = firebase.auth()
-
-    function logout() {
-      // Faço um logout do meu usuário (saio da aplicação).
-      firebase.auth().signOut().then(() => {
-        alert('Usuário deslogou');
-      })
-    }
-
-    window.onload = function() {
-
-      auth.onAuthStateChanged(user => {
-        if (user) {
-          var profile = document.querySelector("#imageUser");
-          var hello = document.querySelector("#hello");
-
-          profile.src = user.photoURL
-          hello.innerHTML = "Olá " + user.displayName
-
-          db.collection('channels').onSnapshot((data)=> {
-            data.docs.map(doc => {
-              console.log("objeto:",
-                doc.data());
-              var channel = document.createElement("li");
-              channel.className = 'movie';
-              channel.id = `${doc.data().name}`;
-
-              var imageChannel = document.createElement("img");
-              imageChannel.src = `${doc.data().image}`;
-              channel.appendChild(imageChannel);
-
-              var nameChannel = document.createElement("span");
-              nameChannel.innerHTML = `${doc.data().name}`;
-              channel.appendChild(nameChannel);
-
-              var qualityChannel = document.createElement("strong");
-              qualityChannel.innerHTML = `${doc.data().quality}`;
-              channel.appendChild(qualityChannel);
+        var qualityChannel = document.createElement("strong");
+        qualityChannel.innerHTML = `${doc.data().quality}`;
+        channel.appendChild(qualityChannel);
 
 
-              document.querySelector("#movies").appendChild(channel);
+        document.querySelector("#movies").appendChild(channel);
 
-              return doc.data();
-            });
-          });
-
-        } else {
-          var provider = new firebase.auth.GoogleAuthProvider();
-
-          firebase.auth().signInWithRedirect(provider).then(resposta => {
-            if (resposta.credential) {
-              const token = resposta.credential.accessToken;
-            }
-            const user = resposta.user;
-          }).catch(error => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.email;
-            const credential = error.credential;
-          });
-        }
+        return doc.data();
       });
-    };*/
+    });
 
     var loading = document.querySelector("#loading");
 
