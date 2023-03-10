@@ -271,3 +271,5 @@ ads_protectionBx.addEventListener("click", ()=> {
   document.querySelector(".button__menu").classList.toggle('active');
   ads_protection.classList.toggle('active');
 });
+
+var searchForm = document.querySelector("#searchForm")
