@@ -185,14 +185,6 @@
 
     window.onload = function() {
 
-      var profile = document.querySelector("#imageUser");
-      var hello = document.querySelector("#hello");
-
-      profile.src = user.photoURL
-      hello.innerHTML = "Olá " + user.displayName
-
-
-
       db.collection('channels').onSnapshot((data)=> {
         data.docs.map(doc => {
           console.log("objeto:",
