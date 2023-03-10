@@ -128,9 +128,9 @@ function createImageMovie(movieImage, movieTitle) {
 
 function addMovieInList(movie) {
   const movieElement = document.createElement('li');
-  movieElement.classList.add('movie');
+  movieElement.classList.add('movie')
 
-  movieElement.setAttribute('id', movie.id);
+  movieElement.setAttribute('id', movie.id)
 
   const genre = `<span>${movie.genre}</span>`;
   const title = `<strong>${movie.title}</strong>`;
