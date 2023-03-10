@@ -252,6 +252,10 @@ document.addEventListener("DOMContentLoaded", function () {
               imageChannel.src = ${doc.data().image};
               channel.appendChild(imageChannel); 
               
+              var nameChannel = document.createElement("span");
+              nameChannel.innerHTML = ${doc.data().name};
+              channel.appendChild(nameChannel); 
+              
               
               
               document.querySelector("#movies").appendChild(channel);
