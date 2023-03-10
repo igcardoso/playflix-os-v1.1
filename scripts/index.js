@@ -272,4 +272,10 @@ ads_protectionBx.addEventListener("click", ()=> {
   ads_protection.classList.toggle('active');
 });
 
-var searchForm = document.querySelector("#searchForm")
+var searchForm = document.querySelector("#searchForm");
+var submitSearch = document.querySelector("#submitSearch");
+
+searchForm.addEventListener("click", ()=> {
+  var searchInput = document.querySelector('name=searchInput').value;
+  submitSearch.href = "#" + searchInput
+});
