@@ -220,8 +220,23 @@
         data.docs.map(doc => {
           console.log("objeto:",
             doc.data());
-          var contantChannel = document.createElement("li");
-         
+          var channel = document.createElement("li");
+          channel.className = 'movie';
+          channel.id = ${doc.data().name};
+
+          var imageChannel = document.createElement("img");
+          imageChannel.src = ${doc.data().image};
+          channel.appendChild(imageChannel);
+
+          var nameChannel = document.createElement("span");
+          nameChannel.innerHTML = ${doc.data().name};
+          channel.appendChild(nameChannel);
+
+          var qualityChannel = document.createElement("strong");
+          qualityChannel.innerHTML = ${doc.data().quality};
+          channel.appendChild(qualityChannel);
+
+
           document.querySelector("#movies").appendChild(channel);
 
           return doc.data();
