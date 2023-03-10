@@ -163,51 +163,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/3.5.1/firebase-ui-auth__pt.js"></script>
   <script type="text/javascript" charset="utf-8">
-    var config = {
-      apiKey: "AIzaSyDZmkmi8qstIfuJ6il-uAfM8wqPFGNeQOI",
-      authDomain: "playflix-os.firebaseapp.com",
-      projectId: "playflix-os",
-      storageBucket: "playflix-os.appspot.com",
-      messagingSenderId: "974391976020",
-      appId: "1:974391976020:web:f4d56ca28c548c452e0dc1",
-      measurementId: "G-M1BGZ38TDV"
-    };
-
-    firebase.initializeApp(config);
-    // Apenas para remover um warning
-    firebase.firestore().settings({
-      timestampsInSnapshots: true,
-
-    });
-
-    const db = firebase.firestore()
-
-      db.collection('channels').onSnapshot((data)=> {
-        data.docs.map(doc => {
-          console.log("objeto:",
-            doc.data());
-          var channel = document.createElement("li");
-          channel.className = 'movie';
-          channel.id = ${doc.data().name};
-
-          var imageChannel = document.createElement("img");
-          imageChannel.src = ${doc.data().image};
-          channel.appendChild(imageChannel);
-
-          var nameChannel = document.createElement("span");
-          nameChannel.innerHTML = ${doc.data().name};
-          channel.appendChild(nameChannel);
-
-          var qualityChannel = document.createElement("strong");
-          qualityChannel.innerHTML = ${doc.data().quality};
-          channel.appendChild(qualityChannel);
-
-
-          document.querySelector("#movies").appendChild(channel);
-
-          return doc.data();
-        });
-      });
+    
 
     var loading = document.querySelector("#loading");
 
