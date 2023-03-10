@@ -128,7 +128,7 @@ function createImageMovie(movieImage, movieTitle) {
 
 function addMovieInList(movie) {
   const movieElement = document.createElement('li')
-  movieElement.classList.add('movie ação')
+  movieElement.classList.add('movie')
 
   movieElement.setAttribute('id', movie.id)
 
