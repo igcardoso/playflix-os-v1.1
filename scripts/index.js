@@ -249,6 +249,7 @@ function formattedMovieId(movieId) {
 }
 
 buttonAddMovie.addEventListener('submit', async function(event) {
+  let texto = document.querySelector('[name=search__movie]').value;
   window.location.href = "#" + valueSearch
 })
 
