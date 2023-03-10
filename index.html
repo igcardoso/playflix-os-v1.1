@@ -81,10 +81,11 @@
         <h2 id="hello">Filmes</h2>
         <form class="form" id="add__movie">
           <input type="text" placeholder="Adicione o seu filme" name="movie search__movie" />
-
-          <button type="submit">
-            +
-          </button>
+          <a href="">
+            <button type="submit">
+              +
+            </button>
+          </a>
         </form>
         <div class="type_entertainment">
           <span id="filmes" class="f">Filmes</span>
@@ -169,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
           var hello = document.querySelector("#hello");
 
           profile.src = user.photoURL
-          hello.innerHTML = "Olá " + user.displayName 
+          hello.innerHTML = "Olá " + user.displayName
 
           /*
 
@@ -236,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     };
-    
+
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
         navigator.serviceWorker
