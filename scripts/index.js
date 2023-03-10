@@ -131,6 +131,7 @@ function addMovieInList(movie) {
   movieElement.classList.add('movie')
 
   movieElement.setAttribute('id', movie.id)
+  movieElement.id.add(movie.genre)
 
   const genre = `<span>${movie.genre}</span>`
   const title = `<strong>${movie.title}</strong>`
