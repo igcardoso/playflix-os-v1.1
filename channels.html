@@ -200,6 +200,10 @@
         var qualityChannel = document.createElement("strong");
         qualityChannel.innerHTML = `${doc.data().quality}`;
         channel.appendChild(qualityChannel);
+        
+        channel.addEventListener("click", ()=> {
+          var inputChannel = `${doc.data().link}` + `${doc.data().name}`
+        })
 
 
         document.querySelector("#movies").appendChild(channel);
