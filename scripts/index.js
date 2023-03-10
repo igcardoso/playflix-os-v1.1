@@ -69,7 +69,7 @@ function setMainMovie(movie) {
       document.querySelector("#main").style.display = "none";
     }, 2000);
   });
-  title.innerHTML = movie.name;
+  title.innerHTML = movie.title;
   description.innerHTML = movie.overview;
   rating.innerHTML = movie.vote_average;
   info.innerHTML = movie.release + ' - ' + movie.genre + ' - Filme';
