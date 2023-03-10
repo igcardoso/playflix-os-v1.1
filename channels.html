@@ -145,7 +145,7 @@
         <span id="channels" class="f">Canais</span>
       </div>
       <ul id="movies">
-        
+
       </ul>
     </nav>
   </header>
@@ -156,7 +156,12 @@
     </div>
     <iframe allow="autoplay" id="channel" src="" frameborder="0"></iframe>
   </main>
-
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <!-- Inicializa o firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/3.5.1/firebase-ui-auth__pt.js"></script>
   <script type="text/javascript" charset="utf-8">
 
 
@@ -178,7 +183,7 @@
     });
 
     const db = firebase.firestore()
-    
+
 
     /**
     * Listener de dom ready
@@ -189,40 +194,48 @@ document.addEventListener("DOMContentLoaded", function () {
 */
     window.onload = function() {
 
-          var profile = document.querySelector("#imageUser");
-          var hello = document.querySelector("#hello");
+      var profile = document.querySelector("#imageUser");
+      var hello = document.querySelector("#hello");
 
-          profile.src = user.photoURL
-          hello.innerHTML = "Olá " + user.displayName
+      profile.src = user.photoURL
+      hello.innerHTML = "Olá " + user.displayName
 
 
 
-          db.collection('channels').onSnapshot((data)=> {
-            data.docs.map(doc => {
-              console.log("objeto:",
-                doc.data());
-              var channel = document.createElement("li");
-              channel.className = 'movie';
-              channel.id = ${doc.data().name};
-              
-              var imageChannel = document.createElement("img");
-              imageChannel.src = ${doc.data().name};
-              channel.appendChild(imageChannel); 
-              
-              var nameChannel = document.createElement("span");
-              nameChannel.innerHTML = ${doc.data().name};
-              channel.appendChild(nameChannel);
-              
-              var qualityChannel = document.createElement("strong");
-              qualityChannel.innerHTML = ${doc.data().quality};
-              channel.appendChild(qualityChannel);
-              
-              
-              document.querySelector("#movies").appendChild(channel);
+      db.collection('channels').onSnapshot((data)=> {
+        data.docs.map(doc => {
+          console.log("objeto:",
+            doc.data());
+          var channel = document.createElement("li");
+          channel.className = 'movie';
+          channel.id = $ {
+            doc.data().name
+          };
 
-              return doc.data();
-            });
-          })
+          var imageChannel = document.createElement("img");
+          imageChannel.src = $ {
+            doc.data().image
+          };
+          channel.appendChild(imageChannel);
+
+          var nameChannel = document.createElement("span");
+          nameChannel.innerHTML = $ {
+            doc.data().name
+          };
+          channel.appendChild(nameChannel);
+
+          var qualityChannel = document.createElement("strong");
+          qualityChannel.innerHTML = $ {
+            doc.data().quality
+          };
+          channel.appendChild(qualityChannel);
+
+
+          document.querySelector("#movies").appendChild(channel);
+
+          return doc.data();
+        });
+      })
     };
 
     var loading = document.querySelector("#loading");
