@@ -70,7 +70,7 @@
     </div>
 
     <header id="header">
-      <img style="border-radius: .8em;" id="imageUser" width="50px" height="50px" class="logo" src="images/icons/icon-512x512.png" alt="logo do app" />
+      <img style="border-radius: 8em;" id="imageUser" width="50px" height="50px" class="logo" src="images/icons/icon-512x512.png" alt="logo do app" />
       <span type="button" class="button__menu">
         <span></span>
         <span></span>
@@ -78,7 +78,7 @@
       </span>
 
       <nav id="navigation" class="navigation">
-        <h2>Filmes</h2>
+        <h2 id="hello">Filmes</h2>
         <form class="form" id="add__movie">
           <input type="text" placeholder="Adicione o seu filme" name="movie" />
 
@@ -166,8 +166,10 @@ document.addEventListener("DOMContentLoaded", function () {
       auth.onAuthStateChanged(user => {
         if (user) {
           var profile = document.querySelector("#imageUser");
+          var hello = document.querySelector("#hello");
 
           profile.src = user.photoURL
+          hello.innerHTML = "Olá" + user.displayName 
 
           /*
 
