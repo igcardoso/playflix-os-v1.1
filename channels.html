@@ -238,53 +238,32 @@ document.addEventListener("DOMContentLoaded", function () {
           profile.src = user.photoURL
           hello.innerHTML = "Olá " + user.displayName
 
-          /*
-
-      db.collection('comunicados').onSnapshot((data)=> {
-        data.docs.map(doc => {
-          console.log("objeto:",
-            doc.data());
-          var cards = document.createElement("div");
-          cards.className = 'cards';
-          cards.innerHTML = `
-          <div class="container">
-          <div class="topEl user">
-          <img class="imgUser" src="${doc.data().photograph}" />
-          </div>
 
 
-          <div class="topEl text">
-          <h1 class="name">${doc.data().name}</h1>
-          <p class="date">
-          ${doc.data().date}
-          </p>
-          </div>
-          <div class="topEl icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24" style="transform: ;msFilter:;"><circle cx="18" cy="6" r="3"></circle><path d="M18 19H5V6h8c0-.712.153-1.387.422-2H5c-1.103 0-2 .897-2 2v13c0 1.103.897 2 2 2h13c1.103 0 2-.897 2-2v-8.422A4.962 4.962 0 0 1 18 11v8z"></path></svg>
-          </div>
-          </div>
-          <div class="message">
-          ${doc.data().message}
-          </div>
-          <div class="adms">
-          <img class="img1" src="images/user_01.jpg" />
-          <img class="img2" src="images/user_02.jpg" />
-          <img class="img3" src="images/user_03.jpg" />
-          <img class="img4" src="images/user_04.jpg" />
-          <a style="text-decoration: none;" href="https://wa.me/55${doc.data().contact}?text=Oi,%20gostaria%20de%20reportar%20um%20erro%20ou%20fazer uma sugestão" class="text" id="support">
-          responder a ${doc.data().name}
-          </a>
-          </div>`;
+          db.collection('comunicados').onSnapshot((data)=> {
+            data.docs.map(doc => {
+              console.log("objeto:",
+                doc.data());
+              var cards = document.createElement("div");
+              cards.className = 'cards';
+              cards.innerHTML = ``;
+              
+             var idChannel = "#" + name
+
+              document.querySelector(idChannel).addEventListener("click", ()=> {
+                view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
+                document.querySelector('.navigation').classList.toggle('active');
+              });
 
 
-          // *******************************
+              // *******************************
 
-          document.querySelector("#containment-card-notifications").appendChild(cards);
+              document.querySelector("#containment-card-notifications").appendChild(cards);
 
-          return doc.data();
-        });
-      })
-      */
+              return doc.data();
+            });
+          })
+
 
         } else {
           var provider = new firebase.auth.GoogleAuthProvider();
@@ -327,43 +306,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function() {
       view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
     }, 1000);
-
-
-    document.querySelector("#megapix").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=megapix";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
-    document.querySelector("#hbo").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
-    document.querySelector("#hbo_plus").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-plus";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
-    document.querySelector("#telecine_cult").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=telecine-cult";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
-    document.querySelector("#telecine_touch").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=telecine-touch";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
-    document.querySelector("#hbo_pop").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-poo";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
-    document.querySelector("#hbo_2").addEventListener("click", ()=> {
-      view.src = "https://tv.appmj.xyz/tv.php?canal=hbo-2";
-      document.querySelector('.navigation').classList.toggle('active');
-    });
-
 
     var ads_protection = document.querySelector("#ads_protection");
     var ads_protectionBx = document.querySelector("#ads_protectionBx");
