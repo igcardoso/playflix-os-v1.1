@@ -238,7 +238,7 @@ function loadMovies() {
 }
 
 const buttonAddMovie = document.getElementById('add__movie')
-const buttonAddMovie = document.getElementById('search__movie')
+const search__movie = document.getElementById('search__movie')
 
 function formattedMovieId(movieId) {
   if (movieId.includes('https://www.imdb.com/title/')) {
@@ -247,6 +247,10 @@ function formattedMovieId(movieId) {
   }
 
   return movieId
+}
+
+search__movie.addEventListener('submit', async function(event) {
+  
 }
 
 buttonAddMovie.addEventListener('submit', async function(event) {
