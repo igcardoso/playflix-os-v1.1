@@ -178,14 +178,7 @@
     });
 
     const db = firebase.firestore()
-    const auth = firebase.auth()
-
-    function logout() {
-      // Faço um logout do meu usuário (saio da aplicação).
-      firebase.auth().signOut().then(() => {
-        alert('Usuário deslogou');
-      })
-    }
+    
 
     /**
     * Listener de dom ready
@@ -196,8 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
 */
     window.onload = function() {
 
-      auth.onAuthStateChanged(user => {
-        if (user) {
           var profile = document.querySelector("#imageUser");
           var hello = document.querySelector("#hello");
 
@@ -232,24 +223,6 @@ document.addEventListener("DOMContentLoaded", function () {
               return doc.data();
             });
           })
-
-
-        } else {
-          var provider = new firebase.auth.GoogleAuthProvider();
-
-          firebase.auth().signInWithRedirect(provider).then(resposta => {
-            if (resposta.credential) {
-              const token = resposta.credential.accessToken;
-            }
-            const user = resposta.user;
-          }).catch(error => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.email;
-            const credential = error.credential;
-          });
-        }
-      });
     };
 
     var loading = document.querySelector("#loading");
