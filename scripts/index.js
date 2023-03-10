@@ -249,7 +249,7 @@ function formattedMovieId(movieId) {
   return movieId
 }
 
-search__movie.addEventListener('submit', async function(event) {
+search__movie.addEventListener('submit', ()=> {
   let valueSearch = document.querySelector('[name=valueSearch]').value;
   
   document.querySelector("href__search").href = "#" + valueSearch
