@@ -231,6 +231,7 @@
         channel.appendChild(qualityChannel);
 
         channel.addEventListener("click", ()=> {
+          document.querySelector('.navigation').classList.toggle('active');
           var inputChannel = document.querySelector("#channel")
 
           inputChannel.src = `${doc.data().link}`;
