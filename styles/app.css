@@ -263,6 +263,11 @@ main {
   flex-direction: row;
 }
 
+.menu__bottom div {
+  width: 200%;
+  padding: 30px;
+}
+
 @media(max-width: 1080px) {
   #app {
     padding: 40px;
