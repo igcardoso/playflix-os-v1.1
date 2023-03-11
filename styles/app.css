@@ -80,6 +80,18 @@
   overflow: hidden;
 }
 
+#select__player .bx-chevron-left {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: hsla(0,0%,100%,0.084);
+  backdrop-filter: blur(15px);
+  padding: 7px;
+  border-radius: 8em;
+  font-size: 40px;
+  color: #ffffff;
+}
+
 #iframe {
   height: 100vh;
 }
