@@ -37,8 +37,16 @@ function setMainMovie(movie) {
   const idFilm = movie.id;
   showButton.addEventListener("click", ()=> {
 
+    /* ============= */
+    var pageFilm = document.querySelector("#pageFilm");
+    var select__player = document.querySelector("#select__player");
+    var loading = document.querySelector("#loading");
+    var backPageFilm = document.querySelector("#backPageFilm");
+    var locationMovies = document.querySelector("#iframe");
     var select__player1 = document.querySelector("#select1");
     var select__player2 = document.querySelector("#select1");
+
+
 
     select__player1.addEventListener("click", ()=> {
       document.querySelector(".orientation_video").play();
@@ -75,14 +83,7 @@ function setMainMovie(movie) {
         document.querySelector("#main").style.display = "none";
         select__player.style.display = "none";
       }, 2000);
-    })
-
-    /* ============= */
-    var pageFilm = document.querySelector("#pageFilm");
-    var select__player = document.querySelector("#select__player");
-    var loading = document.querySelector("#loading");
-    var backPageFilm = document.querySelector("#backPageFilm");
-    var locationMovies = document.querySelector("#iframe");
+    }); 
 
     loading.style.left = "0";
     setTimeout(function() {
