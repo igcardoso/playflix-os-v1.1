@@ -60,6 +60,14 @@
   transform: translateY(0);
 }
 
+#movies2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-row: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
 .homeMovie {
   display: flex;
   flex-direction: column;
