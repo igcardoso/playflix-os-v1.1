@@ -15,7 +15,11 @@ function getUrlMovie(movieId) {
   return `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=${API_LANGUAGE}`;
 }
 
-document.querySelector(".channels").addEventListener("click", ()=> {
+document.querySelector("#channels").addEventListener("click", ()=> {
+  window.location.href = "channels.html";
+});
+
+document.querySelector("#bottomChannels").addEventListener("click", ()=> {
   window.location.href = "channels.html";
 });
 
