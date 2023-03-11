@@ -62,7 +62,7 @@ function setMainMovie(movie) {
       document.querySelector("#navigation").style.display = "none";
       document.querySelector("#main").style.display = "none";
       select__player.style.display = "block";
-      select__player.style.backgroundImage = movie.image.original
+      select__player.style.backgroundImage.url = movie.image.original
     }, 2000);
   });
   title.innerHTML = movie.title;
