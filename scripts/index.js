@@ -155,7 +155,7 @@ function changeMovieActiveInList(newMovieActive) {
 
 function changeMainMovie(movieId) {
   changeMovieActiveInList(movieId);
-  
+  document.querySelector('.navigation').classList.toggle('active');
 
   const movie = movies.find(movie => movie.id === movieId);
 
