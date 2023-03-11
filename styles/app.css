@@ -267,13 +267,21 @@ main {
 .menu__bottom button {
   width: 200%;
   padding: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: hsla(0,0%,0%,0.082);
   backdrop-filter: blur(15px);
   font-size: 18px;
   margin: 10px;
   border-radius: 1em;
+}
+
+.menu__bottom .filmes {
+  background: #ffffff;
+}
+
+.menu__bottom .channels {
+  background: none;
 }
 
 @media(max-width: 1080px) {
