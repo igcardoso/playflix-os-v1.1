@@ -5,6 +5,12 @@ header {
   margin-bottom: 24px;
 }
 
+header img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .button__menu {
   position: absolute;
   top: 24px;
