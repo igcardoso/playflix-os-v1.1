@@ -55,12 +55,6 @@ function setMainMovie(movie) {
         document.querySelector("#main").style.display = "flex";
       });
       
-      
-      pageFilm.style.display = "none";
-      document.querySelector("#app").style.display = "none";
-      document.querySelector("#header").style.display = "none";
-      document.querySelector("#navigation").style.display = "none";
-      document.querySelector("#main").style.display = "none";
       select__player.style.display = "block";
     }, 2000);
   });
