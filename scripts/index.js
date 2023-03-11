@@ -211,8 +211,6 @@ function addMovieInList(movie) {
   const homeMovieElement = document.createElement('li');
   homeMovieElement.classList.add('movie');
 
-  homeMovieElement.setAttribute('id', movie.id);
-
   const homeGenre = `<span>${movie.genre}</span>`;
   const homeTitle = `<strong>${movie.title}</strong>`;
 
