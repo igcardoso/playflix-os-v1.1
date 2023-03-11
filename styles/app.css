@@ -73,6 +73,9 @@
 }
 
 #select__player {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-repeat: repeat-x;
   background-size: cover;
   background-position: center;
