@@ -54,9 +54,9 @@ function setMainMovie(movie) {
       var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
       var marker_contention = document.querySelector("#pageFilm  .marker_contention");
 
-      loading.style.left = "0";
+      // loading.style.left = "0";
       setTimeout(function() {
-        loading.style.left = "-100%";
+        // loading.style.left = "-100%";
         marker_contention.addEventListener("click", ()=> {
           orientation_alert.style.transform = "translateY(-100%)";
           document.querySelector(".orientation_video").pause();
