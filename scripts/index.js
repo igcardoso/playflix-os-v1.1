@@ -6,11 +6,11 @@ const BASE_URL_IMAGE = {
 };
 
 setTimeout(function() {
-  document.querySelector("#loading").style.left = "0"
+  document.querySelector("#loadingHome").style.left = "0"
 }, 0);
 
 setTimeout(function() {
-  document.querySelector("#loading").style.left = "-100%"
+  document.querySelector("#loadingHome").style.left = "-100%"
 }, 2000);
 
 
