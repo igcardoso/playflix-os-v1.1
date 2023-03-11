@@ -85,7 +85,7 @@
   height: 100vh;
   overflow: hidden;
   z-index: 10000;
-  transition: opacity 2s;
+  transition: 2s, opacity;
 }
 
 #select__player .bx-chevron-left {
