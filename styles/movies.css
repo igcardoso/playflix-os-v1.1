@@ -142,6 +142,10 @@
 }
 
 @media(max-width: 650px) {
+  .homeMovie {
+    display: flex;
+  }
+  
   #movies {
     grid-template-columns: 1fr;
   }
