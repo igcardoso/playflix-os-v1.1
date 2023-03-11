@@ -102,11 +102,12 @@
 
 #select__player div {
   width: 200px;
-  height: 100px;
-  margin: auto;
+  padding: 20px;
+  margin: 40px auto -20px;
   background: var(--linear);
   text-align: center;
   font-weight: 700;
+  border-radius: 8em;
 }
 
 #iframe {
