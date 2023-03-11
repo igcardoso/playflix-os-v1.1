@@ -266,6 +266,8 @@ main {
 .menu__bottom button {
   width: 200%;
   padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: none;
   font-size: 30px;
 }
