@@ -32,20 +32,3 @@ header {
 .button__menu span:last-child {
   width: 45%;
 }
-
-@media(max-width: 768px) {
-  header {
-    margin-bottom: 160px;
-  }
-
-  header img {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-
-  .button__menu {
-    display: none;
-  }
-}
