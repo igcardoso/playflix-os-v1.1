@@ -83,12 +83,6 @@
   display: none;
 }
 
-@media(max-width: 768px) {
-  .homeMovie {
-    display: flex;
-  } 
-}
-  
 @media(max-width: 650px) {
   #movies {
     grid-template-columns: 1fr;
