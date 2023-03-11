@@ -254,7 +254,6 @@ main {
 
 .menu__bottom {
   width: 95%;
-  padding: 15px;
   position: fixed;
   left: 2.5%;
   bottom: 10px;
@@ -262,7 +261,7 @@ main {
   backdrop-filter: blur(15px);
   display: flex;
   flex-direction: row;
-  border-radius: 2em;
+  border-radius: 1em;
 }
 
 .menu__bottom button {
@@ -272,9 +271,9 @@ main {
   padding-bottom: 20px;
   background: hsla(0,0%,0%,0.082);
   backdrop-filter: blur(15px);
-  font-size: 30px;
+  font-size: 18px;
   margin: 10px;
-  border-radius: 2em;
+  border-radius: 1em;
 }
 
 @media(max-width: 1080px) {
