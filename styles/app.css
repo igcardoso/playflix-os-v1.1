@@ -254,7 +254,7 @@ main {
 
 .menu__bottom {
   width: 95%;
-  padding: 5px;
+  padding: 15px;
   position: fixed;
   left: 2.5%;
   bottom: 10px;
@@ -273,6 +273,7 @@ main {
   background: hsla(0,0%,0%,0.082);
   backdrop-filter: blur(15px);
   font-size: 30px;
+  margin: 10px;
 }
 
 @media(max-width: 1080px) {
