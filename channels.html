@@ -94,10 +94,6 @@
       height: 100%;
       z-index: -1;
     }
-    
-    #Esportes {
-      background-image: linear-gradient(180deg, rgba(251,82,0,0.082) 11.72%, #0E172F 100%);
-    }
 
     .movie h1 {
       background: #000000;
@@ -198,7 +194,13 @@
           doc.data());
         var channel = document.createElement("li");
         channel.className = 'movie';
-        channel.id = `${doc.data().type}`;
+        channel.id = `${doc.data().name}`;
+        
+        if (doc.data().name == "Esportes") {
+          var imageChannel = document.createElement("img");
+          imageChannel.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr94P-8p5domljsjLH5UHrjzNMaCQdhaE3eRjInWo7uQsMZ5OZIhhS1fWo&s=10"
+          channel.appendChild(imageChannel);
+        }
         
         /*
         var imageChannel = document.createElement("img");
