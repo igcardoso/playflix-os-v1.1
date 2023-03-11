@@ -19,10 +19,6 @@ document.querySelector("#channels").addEventListener("click", ()=> {
   window.location.href = "channels.html";
 });
 
-document.querySelector("#bottomChannels").addEventListener("click", ()=> {
-  window.location.href = "channels.html";
-});
-
 document.querySelector(".button__menu").addEventListener("click", ()=> {
   var button = document.querySelector('.button__menu');
   var navigation = document.querySelector('.navigation');
@@ -209,20 +205,6 @@ function addMovieInList(movie) {
   movieElement.appendChild(createImageMovie(movie.image.small, movie.title))
 
   moviesElement.appendChild(movieElement)
-  
-  
-  
-  const homeMovieElement = document.createElement('li');
-  homeMovieElement.classList.add('homeMovie');
-
-  const homeGenre = `<span>${movie.genre}</span>`;
-  const homeTitle = `<strong>${movie.title}</strong>`;
-
-  homeMovieElement.innerHTML = homeGenre + homeTitle
-  homeMovieElement.appendChild(createButtonMovie(movie.id))
-  homeMovieElement.appendChild(createImageMovie(movie.image.small, movie.title))
-  
-  moviesElement2.appendChild(homeMovieElement)
 }
 
 async function getMovieData(movieId) {
