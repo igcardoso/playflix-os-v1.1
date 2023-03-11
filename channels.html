@@ -192,11 +192,12 @@
       data.docs.map(doc => {
         console.log("objeto:",
           doc.data());
+        var type = `${doc.data().type}`
         var channel = document.createElement("li");
         channel.className = 'movie';
         channel.id = `${doc.data().name}`;
         
-        if (doc.data().type == "Esportes") {
+        if (type == "Esportes") {
           var imageChannel = document.createElement("img");
           imageChannel.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr94P-8p5domljsjLH5UHrjzNMaCQdhaE3eRjInWo7uQsMZ5OZIhhS1fWo&s=10"
           channel.appendChild(imageChannel);
