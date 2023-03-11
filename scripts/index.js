@@ -54,13 +54,14 @@ function setMainMovie(movie) {
         document.querySelector("#main").style.display = "flex";
       });
       
-      select__player.style.display = "block";
-      select__player.backgroundImage = movieImage;
+      
       pageFilm.style.display = "none";
       document.querySelector("#app").style.display = "none";
       document.querySelector("#header").style.display = "none";
       document.querySelector("#navigation").style.display = "none";
       document.querySelector("#main").style.display = "none";
+      select__player.style.display = "block";
+      select__player.backgroundImage = movieImage;
     }, 2000);
   });
   title.innerHTML = movie.title;
