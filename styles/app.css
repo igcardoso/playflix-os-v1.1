@@ -262,7 +262,7 @@ main {
   backdrop-filter: blur(15px);
   display: flex;
   flex-direction: row;
-  border-radius: .8em;
+  border-radius: 2em;
 }
 
 .menu__bottom button {
@@ -274,6 +274,7 @@ main {
   backdrop-filter: blur(15px);
   font-size: 30px;
   margin: 10px;
+  border-radius: 2em;
 }
 
 @media(max-width: 1080px) {
