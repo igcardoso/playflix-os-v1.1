@@ -265,7 +265,7 @@ main {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(-50deg, rgb(13,22,46) 23.21%, rgba(13, 22, 46, 0.0001) 96.69%);
+    background: linear-gradient(-100deg, rgb(13,22,46) 23.21%, rgba(13, 22, 46, 0.0001) 96.69%);
   }
 
   #app {
