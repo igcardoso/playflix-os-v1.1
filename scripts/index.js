@@ -61,7 +61,7 @@ function setMainMovie(movie) {
         document.querySelector("#navigation").style.display = "block";
         document.querySelector("#main").style.display = "flex";
       });
-      locationMovies.src = 'https://embed.warezcdn.com/filmes/' + idFilm;
+      locationMovies.src = 'https://embed.warezcdn.com/filme/' + idFilm;
       pageFilm.style.display = "block";
       document.querySelector("#app").style.display = "none";
       document.querySelector("#header").style.display = "none";
