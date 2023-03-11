@@ -192,11 +192,14 @@
         var channel = document.createElement("li");
         channel.className = 'movie';
         channel.id = `${doc.data().name}`;
-
+        
+        /*
         var imageChannel = document.createElement("img");
         imageChannel.src = `${doc.data().image}`;
         channel.appendChild(imageChannel);
-
+        
+        */
+        
         var nameChannel = document.createElement("h1");
         nameChannel.innerHTML = `${doc.data().name}`;
         channel.appendChild(nameChannel);
