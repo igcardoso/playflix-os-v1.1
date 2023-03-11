@@ -115,7 +115,7 @@ function setMainMovie(movie) {
         document.querySelector("#navigation").style.display = "none";
         document.querySelector("#main").style.display = "none";
         select__player.style.display = "none";
-      }, 2000);
+      }, 500);
     });
 
     loading.style.left = "0";
@@ -132,7 +132,7 @@ function setMainMovie(movie) {
       });
 
       select__player.style.display = "block";
-    }, 2000);
+    }, 500);
   });
   title.innerHTML = movie.title;
   description.innerHTML = movie.overview;
