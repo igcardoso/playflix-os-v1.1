@@ -104,6 +104,9 @@
   width: 200px;
   height: 100px;
   margin: auto;
+  background: var(--linear);
+  text-align: center;
+  font-weight: 700;
 }
 
 #iframe {
