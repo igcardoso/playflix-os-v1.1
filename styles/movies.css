@@ -61,9 +61,9 @@
 }
 
 #movies2 {
-  background: #000000;
+  background-color: #000000;
   margin-top: 40px;
-  margin-left: -10px;
+  margin-left: -13px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   grid-gap: 5px;
