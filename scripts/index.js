@@ -5,15 +5,6 @@ const BASE_URL_IMAGE = {
   small: 'https://image.tmdb.org/t/p/w500'
 };
 
-setTimeout(function() {
-  document.querySelector("#loadingHome").style.left = "0"
-}, 0);
-
-setTimeout(function() {
-  document.querySelector("#loadingHome").style.left = "-100%"
-}, 2000);
-
-
 const movies = [];
 let movieActive = '';
 const moviesElement = document.getElementById('movies');
