@@ -39,4 +39,8 @@ header {
   header {
     margin-bottom: 50px;
   }
+  
+  .button__menu {
+    display: none;
+  }
 }
