@@ -96,13 +96,14 @@
     }
 
     .movie h1 {
-      background: #ffffff;
+      background: -webkit-linear-gradient(20deg, #9e0000, #00009e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       padding: 5px;
       padding-left: 10px;
       padding-right: 10px;
       border-radius: .2em;
       margin: 10px auto;
-      color: #000000;
       z-index: -1;
     }
 
@@ -200,7 +201,7 @@
         var channel = document.createElement("li");
         channel.className = 'movie';
         channel.id = `${doc.data().name}`;
-        
+
         if (type == "Esportes") {
           var imageChannel = document.createElement("img");
           imageChannel.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr94P-8p5domljsjLH5UHrjzNMaCQdhaE3eRjInWo7uQsMZ5OZIhhS1fWo&s=10"
@@ -226,14 +227,13 @@
           imageChannel.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxfEmZm9n3KssyX47mIpDlKAquM0RBA5Hffw&usqp=CAU"
           channel.appendChild(imageChannel);
         }
-        
+
         /*
         var imageChannel = document.createElement("img");
         imageChannel.src = `${doc.data().image}`;
         channel.appendChild(imageChannel);
-        
         */
-        
+
         var nameChannel = document.createElement("h1");
         nameChannel.innerHTML = `${doc.data().name}`;
         channel.appendChild(nameChannel);
