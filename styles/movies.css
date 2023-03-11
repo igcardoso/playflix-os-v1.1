@@ -90,11 +90,11 @@
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 400;
-
   margin-bottom: 6px;
 }
 
 .homeMovie strong {
+  max-width: 100%;
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 600;
@@ -103,7 +103,6 @@
 .homeMovie button {
   position: absolute;
   inset: 0;
-
   margin: auto;
   background: transparent;
 
