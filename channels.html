@@ -193,8 +193,12 @@
         imageChannel.src = `${doc.data().image}`;
         channel.appendChild(imageChannel);
 
-        var nameChannel = document.createElement("span");
+        var nameChannel = document.createElement("h1");
         nameChannel.innerHTML = `${doc.data().name}`;
+        channel.appendChild(nameChannel);
+        
+        var nameChannel = document.createElement("span");
+        nameChannel.innerHTML = `${doc.data().type}`;
         channel.appendChild(nameChannel);
 
         var qualityChannel = document.createElement("strong");
