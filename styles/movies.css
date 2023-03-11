@@ -61,7 +61,7 @@
 }
 
 #movies2 {
-  backdrop-filter: blur(20px);
+  background: #000000;
   margin-top: 40px;
   margin-left: -10px;
   display: grid;
