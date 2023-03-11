@@ -17,7 +17,7 @@
   width: 30px;
   height: 30px;
   margin: 300px auto 0;
-  animation: spiner .9s linear infinite;
+  animation: spiner.9s linear infinite;
 }
 
 #loading .loading .point {
@@ -260,6 +260,14 @@ main {
 }
 
 @media(max-width: 768px) {
+
+  .app__image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(13, 22, 46, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 96.69%);
+  }
+
   #app {
     padding: 24px 0px 0 20px;
   }
