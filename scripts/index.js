@@ -46,8 +46,7 @@ function setMainMovie(movie) {
       loading.style.left = "-100%";
 
       backPageFilm.addEventListener("click", ()=> {
-        document.querySelector(".orientation_video").pause();
-        locationMovies.src = "";
+        select__player.style.display = "none";
         pageFilm.style.display = "none";
         document.querySelector("#app").style.display = "flex";
         document.querySelector("#header").style.display = "flex";
