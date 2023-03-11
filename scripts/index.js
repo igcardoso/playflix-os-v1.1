@@ -32,12 +32,54 @@ function setMainMovie(movie) {
   const info = document.querySelector('.feature__movie span');
   const showButton = document.querySelector('.feature__movie .playFilm');
   const rating = document.querySelector(".rating strong");
-  
-  
+
+
   const idFilm = movie.id;
   showButton.addEventListener("click", ()=> {
+
+    var select__player1 = document.querySelector("#select1");
+    var select__player2 = document.querySelector("#select1");
+
+    select__player1.addEventListener("click", ()=> {
+      document.querySelector(".orientation_video").play();
+      var pageFilm = document.querySelector("#pageFilm");
+      var loading = document.querySelector("#loading");
+      var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
+      var marker_contention = document.querySelector("#pageFilm  .marker_contention");
+      var backPageFilm = document.querySelector("#backPageFilm");
+      var locationMovies = document.querySelector("#iframe");
+
+      loading.style.left = "0";
+      setTimeout(function() {
+        loading.style.left = "-100%";
+        marker_contention.addEventListener("click", ()=> {
+          orientation_alert.style.transform = "translateY(-100%)";
+          document.querySelector(".orientation_video").pause();
+
+        });
+
+        backPageFilm.addEventListener("click", ()=> {
+          document.querySelector(".orientation_video").pause();
+          locationMovies.src = "";
+          pageFilm.style.display = "none";
+          document.querySelector("#app").style.display = "flex";
+          document.querySelector("#header").style.display = "flex";
+          document.querySelector("#navigation").style.display = "block";
+          document.querySelector("#main").style.display = "flex";
+        });
+        locationMovies.src = /*'https://embedder.net/e/movie?imdb='*/ 'https://embedflix.net/filme/' + idFilm;
+        pageFilm.style.display = "block";
+        document.querySelector("#app").style.display = "none";
+        document.querySelector("#header").style.display = "none";
+        document.querySelector("#navigation").style.display = "none";
+        document.querySelector("#main").style.display = "none";
+        select__player.style.display = "none";
+      }, 2000);
+    })
+
+    /* ============= */
     var pageFilm = document.querySelector("#pageFilm");
-    var select__player = document.querySelector("#select__player"); 
+    var select__player = document.querySelector("#select__player");
     var loading = document.querySelector("#loading");
     var backPageFilm = document.querySelector("#backPageFilm");
     var locationMovies = document.querySelector("#iframe");
@@ -54,7 +96,7 @@ function setMainMovie(movie) {
         document.querySelector("#navigation").style.display = "block";
         document.querySelector("#main").style.display = "flex";
       });
-      
+
       select__player.style.display = "block";
     }, 2000);
   });
@@ -165,7 +207,7 @@ async function getMovieData(movieId) {
 function loadMovies() {
   const LIST_MOVIES = [
     'tt10298810',
-    'tt6443346', 
+    'tt6443346',
     'tt9114286',
     'tt9686790',
     'tt4154756',
