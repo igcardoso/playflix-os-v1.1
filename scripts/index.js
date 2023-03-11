@@ -45,7 +45,7 @@ function setMainMovie(movie) {
     var backPageSelect = document.querySelector("#backPageSelect");
     var locationMovies = document.querySelector("#iframe");
     var select__player1 = document.querySelector("#select1");
-    var select__player2 = document.querySelector("#select1");
+    var select__player2 = document.querySelector("#select2");
 
 
     select__player1.addEventListener("click", ()=> {
