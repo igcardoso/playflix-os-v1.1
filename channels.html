@@ -95,6 +95,10 @@
       z-index: -1;
     }
 
+    .movie h1 {
+      margin: auto;
+    }
+
     form {
       position: absolute;
       top: -100%;
@@ -196,7 +200,7 @@
         var nameChannel = document.createElement("h1");
         nameChannel.innerHTML = `${doc.data().name}`;
         channel.appendChild(nameChannel);
-        
+
         var nameChannel = document.createElement("span");
         nameChannel.innerHTML = `${doc.data().type}`;
         channel.appendChild(nameChannel);
@@ -204,11 +208,11 @@
         var qualityChannel = document.createElement("strong");
         qualityChannel.innerHTML = `${doc.data().quality}`;
         channel.appendChild(qualityChannel);
-        
+
         channel.addEventListener("click", ()=> {
           var inputChannel = document.querySelector("#channel")
-          
-        inputChannel.src = `${doc.data().link}`;
+
+          inputChannel.src = `${doc.data().link}`;
         })
 
 
