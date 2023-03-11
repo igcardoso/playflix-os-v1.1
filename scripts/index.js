@@ -70,6 +70,10 @@ function setMainMovie(movie) {
           document.querySelector(".orientation_video").pause();
           locationMovies.src = "";
           pageFilm.style.display = "none";
+          document.querySelector("#app").style.display = "flex";
+          document.querySelector("#header").style.display = "flex";
+          document.querySelector("#navigation").style.display = "block";
+          document.querySelector("#main").style.display = "flex";
           select__player.style.display = "block";
         });
         locationMovies.src = /*'https://embedder.net/e/movie?imdb='*/ 'https://embedflix.net/filme/' + idFilm;
@@ -80,7 +84,7 @@ function setMainMovie(movie) {
         document.querySelector("#main").style.display = "none";
         select__player.style.display = "none";
       }, 2000);
-    }); 
+    });
 
     loading.style.left = "0";
     setTimeout(function() {
