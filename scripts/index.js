@@ -42,10 +42,10 @@ function setMainMovie(movie) {
     var select__player = document.querySelector("#select__player");
     var loading = document.querySelector("#loading");
     var backPageFilm = document.querySelector("#backPageFilm");
+    var backPageSelect = document.querySelector("#backPageSelect");
     var locationMovies = document.querySelector("#iframe");
     var select__player1 = document.querySelector("#select1");
     var select__player2 = document.querySelector("#select1");
-
 
 
     select__player1.addEventListener("click", ()=> {
@@ -89,7 +89,7 @@ function setMainMovie(movie) {
     setTimeout(function() {
       loading.style.left = "-100%";
 
-      backPageFilm.addEventListener("click", ()=> {
+      backPageSelect.addEventListener("click", ()=> {
         select__player.style.display = "none";
         pageFilm.style.display = "none";
         document.querySelector("#app").style.display = "flex";
