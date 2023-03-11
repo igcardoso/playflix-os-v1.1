@@ -8,7 +8,8 @@ const BASE_URL_IMAGE = {
 
 const movies = [];
 let movieActive = '';
-const moviesElement = document.querySelector(".movies");
+const moviesElement = document.getElementById('movies');
+const moviesElement = document.getElementById('movies2');
 
 function getUrlMovie(movieId) {
   return `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=${API_LANGUAGE}`;
@@ -204,6 +205,7 @@ function addMovieInList(movie) {
   movieElement.appendChild(createImageMovie(movie.image.small, movie.title))
 
   moviesElement.appendChild(movieElement)
+  moviesElement2.appendChild(movieElement)
 }
 
 async function getMovieData(movieId) {
