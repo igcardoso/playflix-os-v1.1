@@ -63,7 +63,7 @@
 #movies2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-gap: 24px;
+  grid-gap: 10px;
 }
 
 .homeMovie {
