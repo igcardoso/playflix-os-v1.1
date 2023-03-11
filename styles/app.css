@@ -278,10 +278,12 @@ main {
 
 .menu__bottom .filmes {
   background: #ffffff;
+  color: #000000;
 }
 
 .menu__bottom .channels {
   background: none;
+  backdrop-filter: none;
 }
 
 @media(max-width: 1080px) {
