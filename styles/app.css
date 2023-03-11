@@ -258,9 +258,11 @@ main {
   position: fixed;
   left: 0;
   bottom: 10px;
-  background: #000000;
+  background: hsla(0,0%,0%,0.082);
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: row;
+  border-radius: 8em;
 }
 
 .menu__bottom button {
