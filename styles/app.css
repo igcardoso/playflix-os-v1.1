@@ -76,7 +76,6 @@
   background-repeat: repeat-x;
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(15px);
   display: none;
   color: #000000;
   width: 100%;
