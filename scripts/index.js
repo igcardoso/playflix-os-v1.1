@@ -61,7 +61,7 @@ function setMainMovie(movie) {
         document.querySelector("#navigation").style.display = "block";
         document.querySelector("#main").style.display = "flex";
       });
-      locationMovies.src = /*'https://embedder.net/e/movie?imdb='*/ 'https://wmondplay.online/embed-2/?type=movies&imdb=' + idFilm;
+      locationMovies.src = /*'https://embedder.net/e/movie?imdb='*/ 'https://embedflix.net/filme/' + idFilm;
       pageFilm.style.display = "block";
       document.querySelector("#app").style.display = "none";
       document.querySelector("#header").style.display = "none";
