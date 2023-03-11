@@ -55,7 +55,7 @@ function setMainMovie(movie) {
       });
       
       select__player.style.display = "block";
-      select__player.backgroundImage = movieImage
+      select__player.backgroundImage = movieImage;
       pageFilm.style.display = "none";
       document.querySelector("#app").style.display = "none";
       document.querySelector("#header").style.display = "none";
