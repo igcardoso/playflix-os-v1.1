@@ -50,12 +50,8 @@ function setMainMovie(movie) {
 
     select__player1.addEventListener("click", ()=> {
       document.querySelector(".orientation_video").play();
-      var pageFilm = document.querySelector("#pageFilm");
-      var loading = document.querySelector("#loading");
       var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
       var marker_contention = document.querySelector("#pageFilm  .marker_contention");
-      var backPageFilm = document.querySelector("#backPageFilm");
-      var locationMovies = document.querySelector("#iframe");
 
       loading.style.left = "0";
       setTimeout(function() {
@@ -76,7 +72,42 @@ function setMainMovie(movie) {
           document.querySelector("#main").style.display = "flex";
           select__player.style.display = "block";
         });
-        locationMovies.src = /*'https://embedder.net/e/movie?imdb='*/ 'https://embedflix.net/filme/' + idFilm;
+        locationMovies.src = 'https://embedflix.net/filme/' + idFilm;
+        pageFilm.style.display = "block";
+        document.querySelector("#app").style.display = "none";
+        document.querySelector("#header").style.display = "none";
+        document.querySelector("#navigation").style.display = "none";
+        document.querySelector("#main").style.display = "none";
+        select__player.style.display = "none";
+      }, 2000);
+    });
+    
+    // Segunda seleção de player
+    select__player2.addEventListener("click", ()=> {
+      document.querySelector(".orientation_video").play();
+      var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
+      var marker_contention = document.querySelector("#pageFilm  .marker_contention");
+
+      loading.style.left = "0";
+      setTimeout(function() {
+        loading.style.left = "-100%";
+        marker_contention.addEventListener("click", ()=> {
+          orientation_alert.style.transform = "translateY(-100%)";
+          document.querySelector(".orientation_video").pause();
+
+        });
+
+        backPageFilm.addEventListener("click", ()=> {
+          document.querySelector(".orientation_video").pause();
+          locationMovies.src = "";
+          pageFilm.style.display = "none";
+          document.querySelector("#app").style.display = "flex";
+          document.querySelector("#header").style.display = "flex";
+          document.querySelector("#navigation").style.display = "block";
+          document.querySelector("#main").style.display = "flex";
+          select__player.style.display = "block";
+        });
+        locationMovies.src = 'https://embedder.net/e/movie?imdb=' + idFilm;
         pageFilm.style.display = "block";
         document.querySelector("#app").style.display = "none";
         document.querySelector("#header").style.display = "none";
