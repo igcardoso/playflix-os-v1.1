@@ -35,22 +35,15 @@ function setMainMovie(movie) {
 
   const idFilm = movie.id;
   showButton.addEventListener("click", ()=> {
-    document.querySelector(".orientation_video").play();
     var pageFilm = document.querySelector("#pageFilm");
+    var select__player = document.querySelector("#select__player");
     var loading = document.querySelector("#loading");
-    var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
-    var marker_contention = document.querySelector("#pageFilm  .marker_contention");
     var backPageFilm = document.querySelector("#backPageFilm");
     var locationMovies = document.querySelector("#iframe");
 
     loading.style.left = "0";
     setTimeout(function() {
       loading.style.left = "-100%";
-      marker_contention.addEventListener("click", ()=> {
-        orientation_alert.style.transform = "translateY(-100%)";
-        document.querySelector(".orientation_video").pause();
-
-      });
 
       backPageFilm.addEventListener("click", ()=> {
         document.querySelector(".orientation_video").pause();
@@ -61,8 +54,9 @@ function setMainMovie(movie) {
         document.querySelector("#navigation").style.display = "block";
         document.querySelector("#main").style.display = "flex";
       });
-      locationMovies.src = /*'https://embedder.net/e/movie?imdb='*/ 'https://embedflix.net/filme/' + idFilm;
-      pageFilm.style.display = "block";
+      
+      select__player.style.display = "block";
+      pageFilm.style.display = "none";
       document.querySelector("#app").style.display = "none";
       document.querySelector("#header").style.display = "none";
       document.querySelector("#navigation").style.display = "none";
