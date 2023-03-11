@@ -198,6 +198,7 @@
           doc.data());
         var channel = document.createElement("li");
         channel.className = 'movie';
+        channel.className = `${doc.data().type}`;
         channel.id = `${doc.data().name}`;
         
         /*
