@@ -61,6 +61,7 @@
 }
 
 #movies2 {
+  margin-top: 40px;
   margin-left: -10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
