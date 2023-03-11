@@ -32,11 +32,12 @@ function setMainMovie(movie) {
   const info = document.querySelector('.feature__movie span');
   const showButton = document.querySelector('.feature__movie .playFilm');
   const rating = document.querySelector(".rating strong");
-
+  
+  var select__player = document.querySelector("#select__player");
   const idFilm = movie.id;
+  select__player.style.backgroundImage = movieImage; 
   showButton.addEventListener("click", ()=> {
     var pageFilm = document.querySelector("#pageFilm");
-    var select__player = document.querySelector("#select__player");
     var loading = document.querySelector("#loading");
     var backPageFilm = document.querySelector("#backPageFilm");
     var locationMovies = document.querySelector("#iframe");
@@ -61,7 +62,6 @@ function setMainMovie(movie) {
       document.querySelector("#navigation").style.display = "none";
       document.querySelector("#main").style.display = "none";
       select__player.style.display = "block";
-      select__player.style.backgroundImage = movieImage;
     }, 2000);
   });
   title.innerHTML = movie.title;
