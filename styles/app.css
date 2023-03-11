@@ -103,7 +103,8 @@
   width: 200px;
   padding: 20px;
   margin: 40px auto -20px;
-  background: var(--linear);
+  background: hsla(0,0%,100%,0.082);
+  backdrop-filter: blur(15px);
   text-align: center;
   font-weight: 400;
   border-radius: 8em;
