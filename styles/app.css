@@ -73,7 +73,6 @@
 }
 
 #select__player {
-  backdrop-filter: blur(8px);
   background-repeat: repeat-x;
   background-size: cover;
   background-position: center;
