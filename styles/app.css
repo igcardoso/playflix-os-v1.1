@@ -5,7 +5,7 @@
   width: 100%;
   height: 100vh;
   backdrop-filter: blur(10px);
-  background: hsla(0,0%,100%,0.145);
+  background: hsla(0,0%,100%,0.082);
   z-index: 40000;
   transition: .5s ease;
 }
