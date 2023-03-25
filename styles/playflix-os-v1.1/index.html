@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- FAVICON -->
+  <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.png" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS STYLE LINK -->
+  <link rel="stylesheet" href="./styles/global.css" />
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="manifest" href="manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#0c11ff">
+  <meta name="theme-color" content="#0c11ff">
+  <title>Playflix OS</title>
+</head>
+<body>
+  <div id="loading">
+    <div class="loading">
+      <div class="point">
+
+      </div>
+    </div>
+    <div id="labelNameUi">
+      Fine UI
+    </div>
+  </div>
+  <div id="select__player">
+    <i id="backPageSelect" class='bx bx-chevron-left'></i>
+    <div id="select1">
+      <i class="bx bx-play"></i> Player 1
+    </div>
+    <div id="select2">
+      <i class="bx bx-play"></i> Player 2
+    </div>
+  </div>
+  <div id="pageFilm">
+    <i id="backPageFilm" class='bx bx-chevron-left'></i>
+    <div id="locationMovies">
+      <div id="ads_protection">
+        <i id="ads_protectionBx" class="bx bx-lock-alt"></i>
+      </div>
+      <iframe id="iframe" src="" width="100%" allowfullscreen="allowfullscreen" allow='autoplay' frameborder="0"></iframe>
+    </div>
+    <div class="orientation_alert">
+      <p>
+        Ao dar play você será redirecionado para um anúncio, basta voltar uma vez, e o player já estará disponível.
+      </p>
+      <video class="orientation_video" src="assets/how_to_give_play.mp4" width="90%" preload="preload" loop="loop" controls="0"></video>
+      <div class="marker_contention">
+        <span class="back"><i class="bx bx-x"></i></span>
+      </div>
+    </div>
+  </div>
+  <div id="app">
+    <div class="app__image">
+      <img
+      loading="lazy"
+      alt="Imagem do filme destaque"
+      src=""
+      />
+    </div>
+
+    <header id="header">
+      <img style="border-radius: 8em;" id="imageUser" width="50px" height="50px" class="logo" src="images/icons/icon-512x512.png" alt="logo do app" />
+      <span type="button" class="button__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+      <nav id="navigation" class="navigation">
+        <h2 id="hello">Filmes</h2>
+        <form class="form" id="add__movie">
+          <input type="text" placeholder="Adicione o seu filme" name="movie" />
+          <button type="submit">
+            +
+          </button>
+        </form>
+        <div class="type_entertainment">
+          <span id="filmes" class="f">Filmes</span>
+          <span id="channels" class="s">Canais</span>
+        </div>
+        <ul id="movies">
+
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="feature__movie">
+        <div class="rating">
+          <img width="30px" src="assets/logo-imdb.png">
+          <strong></strong>
+        </div>
+
+        <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+        <span></span>
+        <!-- TITULO DO FILME -->
+        <h1></h1>
+        <!-- SINOPSE DO FILME -->
+        <p></p>
+
+        <span class="playFilm">
+          <i style="font-size: 20px;" class="bx bx-play"></i>
+          Assistir agora
+        </span>
+      </section>
+    </main>
+  </div>
+  <script src="./scripts/index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <!-- Inicializa o firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/3.5.1/firebase-ui-auth__pt.js"></script>
+  <script type="text/javascript" charset="utf-8">
+
+    var config = {
+      apiKey: "AIzaSyDZmkmi8qstIfuJ6il-uAfM8wqPFGNeQOI",
+      authDomain: "playflix-os.firebaseapp.com",
+      projectId: "playflix-os",
+      storageBucket: "playflix-os.appspot.com",
+      messagingSenderId: "974391976020",
+      appId: "1:974391976020:web:f4d56ca28c548c452e0dc1",
+      measurementId: "G-M1BGZ38TDV"
+    };
+
+    firebase.initializeApp(config);
+    // Apenas para remover um warning
+    firebase.firestore().settings({
+      timestampsInSnapshots: true,
+
+    });
+
+    const db = firebase.firestore()
+    const auth = firebase.auth()
+
+    function logout() {
+      // Faço um logout do meu usuário (saio da aplicação).
+      firebase.auth().signOut().then(() => {
+        alert('Usuário deslogou');
+      })
+    }
+
+    /**
+    * Listener de dom ready
+    */
+    /*
+document.addEventListener("DOMContentLoaded", function () {
+})
+*/
+    window.onload = function() {
+
+      auth.onAuthStateChanged(user => {
+        if (user) {
+          var profile = document.querySelector("#imageUser");
+          var hello = document.querySelector("#hello");
+
+          profile.src = user.photoURL
+          hello.innerHTML = "Olá " + user.displayName
+
+          /*
+
+      db.collection('comunicados').onSnapshot((data)=> {
+        data.docs.map(doc => {
+          console.log("objeto:",
+            doc.data());
+          var cards = document.createElement("div");
+          cards.className = 'cards';
+          cards.innerHTML = `
+          <div class="container">
+          <div class="topEl user">
+          <img class="imgUser" src="${doc.data().photograph}" />
+          </div>
+
+
+          <div class="topEl text">
+          <h1 class="name">${doc.data().name}</h1>
+          <p class="date">
+          ${doc.data().date}
+          </p>
+          </div>
+          <div class="topEl icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24" style="transform: ;msFilter:;"><circle cx="18" cy="6" r="3"></circle><path d="M18 19H5V6h8c0-.712.153-1.387.422-2H5c-1.103 0-2 .897-2 2v13c0 1.103.897 2 2 2h13c1.103 0 2-.897 2-2v-8.422A4.962 4.962 0 0 1 18 11v8z"></path></svg>
+          </div>
+          </div>
+          <div class="message">
+          ${doc.data().message}
+          </div>
+          <div class="adms">
+          <img class="img1" src="images/user_01.jpg" />
+          <img class="img2" src="images/user_02.jpg" />
+          <img class="img3" src="images/user_03.jpg" />
+          <img class="img4" src="images/user_04.jpg" />
+          <a style="text-decoration: none;" href="https://wa.me/55${doc.data().contact}?text=Oi,%20gostaria%20de%20reportar%20um%20erro%20ou%20fazer uma sugestão" class="text" id="support">
+          responder a ${doc.data().name}
+          </a>
+          </div>`;
+
+
+          // *******************************
+
+          document.querySelector("#containment-card-notifications").appendChild(cards);
+
+          return doc.data();
+        });
+      })
+      */
+
+        } else {
+          var provider = new firebase.auth.GoogleAuthProvider();
+
+          firebase.auth().signInWithRedirect(provider).then(resposta => {
+            if (resposta.credential) {
+              const token = resposta.credential.accessToken;
+            }
+            const user = resposta.user;
+          }).catch(error => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.email;
+            const credential = error.credential;
+          });
+        }
+      });
+    };
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+        .register("serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err));
+      });
+    }
+  </script>
+</body>
+</html>
