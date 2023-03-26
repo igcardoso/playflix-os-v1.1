@@ -5,10 +5,10 @@ const BASE_URL_IMAGE = {
   small: 'https://image.tmdb.org/t/p/w500'
 };
 
-
 const movies = [];
 let movieActive = '';
 const moviesElement = document.getElementById('movies');
+const moviesElement2 = document.getElementById('movies2');
 
 function getUrlMovie(movieId) {
   return `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=${API_LANGUAGE}`;
@@ -33,41 +33,105 @@ function setMainMovie(movie) {
   const showButton = document.querySelector('.feature__movie .playFilm');
   const rating = document.querySelector(".rating strong");
 
+
   const idFilm = movie.id;
   showButton.addEventListener("click", ()=> {
-    document.querySelector(".orientation_video").play();
+
+    /* ============= */
     var pageFilm = document.querySelector("#pageFilm");
+    var select__player = document.querySelector("#select__player");
     var loading = document.querySelector("#loading");
-    var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
-    var marker_contention = document.querySelector("#pageFilm  .marker_contention");
     var backPageFilm = document.querySelector("#backPageFilm");
+    var backPageSelect = document.querySelector("#backPageSelect");
     var locationMovies = document.querySelector("#iframe");
+    var select__player1 = document.querySelector("#select1");
+    var select__player2 = document.querySelector("#select2");
+
+
+    select__player1.addEventListener("click", ()=> {
+      document.querySelector(".orientation_video").play();
+      var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
+      var marker_contention = document.querySelector("#pageFilm  .marker_contention");
+
+      loading.style.left = "0";
+      setTimeout(function() {
+        loading.style.left = "-100%";
+        marker_contention.addEventListener("click", ()=> {
+          orientation_alert.style.transform = "translateY(-100%)";
+          document.querySelector(".orientation_video").pause();
+
+        });
+
+        backPageFilm.addEventListener("click", ()=> {
+          document.querySelector(".orientation_video").pause();
+          locationMovies.src = "";
+          pageFilm.style.display = "none";
+          document.querySelector("#app").style.display = "flex";
+          document.querySelector("#header").style.display = "flex";
+          document.querySelector("#navigation").style.display = "block";
+          document.querySelector("#main").style.display = "flex";
+          select__player.style.display = "block";
+        });
+        locationMovies.src = 'https://embedflix.net/filme/' + idFilm;
+        pageFilm.style.display = "block";
+        document.querySelector("#app").style.display = "none";
+        document.querySelector("#header").style.display = "none";
+        document.querySelector("#navigation").style.display = "none";
+        document.querySelector("#main").style.display = "none";
+        select__player.style.display = "none";
+      }, 500);
+    });
+    
+    // Segunda seleção de player
+    select__player2.addEventListener("click", ()=> {
+      document.querySelector(".orientation_video").play();
+      var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
+      var marker_contention = document.querySelector("#pageFilm  .marker_contention");
+
+      loading.style.left = "0";
+      setTimeout(function() {
+        loading.style.left = "-100%";
+        marker_contention.addEventListener("click", ()=> {
+          orientation_alert.style.transform = "translateY(-100%)";
+          document.querySelector(".orientation_video").pause();
+
+        });
+
+        backPageFilm.addEventListener("click", ()=> {
+          document.querySelector(".orientation_video").pause();
+          locationMovies.src = "";
+          pageFilm.style.display = "none";
+          document.querySelector("#app").style.display = "flex";
+          document.querySelector("#header").style.display = "flex";
+          document.querySelector("#navigation").style.display = "block";
+          document.querySelector("#main").style.display = "flex";
+          select__player.style.display = "block";
+        });
+        locationMovies.src = 'https://embedder.net/e/movie?imdb=' + idFilm;
+        pageFilm.style.display = "block";
+        document.querySelector("#app").style.display = "none";
+        document.querySelector("#header").style.display = "none";
+        document.querySelector("#navigation").style.display = "none";
+        document.querySelector("#main").style.display = "none";
+        select__player.style.display = "none";
+      }, 500);
+    });
 
     loading.style.left = "0";
     setTimeout(function() {
       loading.style.left = "-100%";
-      marker_contention.addEventListener("click", ()=> {
-        orientation_alert.style.transform = "translateY(-100%)";
-        document.querySelector(".orientation_video").pause();
 
-      });
-
-      backPageFilm.addEventListener("click", ()=> {
-        document.querySelector(".orientation_video").pause();
-        locationMovies.src = "";
+      backPageSelect.addEventListener("click", ()=> {
+        select__player.style.display = "none";
         pageFilm.style.display = "none";
         document.querySelector("#app").style.display = "flex";
         document.querySelector("#header").style.display = "flex";
         document.querySelector("#navigation").style.display = "block";
         document.querySelector("#main").style.display = "flex";
       });
-      locationMovies.src = 'https://embed.warezcdn.com/serie/' + idFilm;
-      pageFilm.style.display = "block";
-      document.querySelector("#app").style.display = "none";
-      document.querySelector("#header").style.display = "none";
-      document.querySelector("#navigation").style.display = "none";
-      document.querySelector("#main").style.display = "none";
-    }, 2000);
+
+      select__player.style.display = "block";
+    }, 500);
   });
   title.innerHTML = movie.title;
   description.innerHTML = movie.overview;
@@ -176,7 +240,7 @@ async function getMovieData(movieId) {
 function loadMovies() {
   const LIST_MOVIES = [
     'tt10298810',
-    'tt6443346', 
+    'tt6443346',
     'tt9114286',
     'tt9686790',
     'tt4154756',
@@ -219,7 +283,9 @@ function loadMovies() {
     'tt7286456',
     'tt5117670',
     'tt8376234',
-    'tt3915174'
+    'tt3915174',
+    'tt0119643',
+    'tt8760708'
   ]
 
   LIST_MOVIES.map(async (movie, index) => {
