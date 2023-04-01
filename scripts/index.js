@@ -107,7 +107,7 @@ function setMainMovie(movie) {
           document.querySelector("#main").style.display = "flex";
           select__player.style.display = "block";
         });
-        locationMovies.src = 'https://embedder.net/e/movie?imdb=' + idFilm;
+        locationMovies.src = 'https://megaembeds.com/embed/movie?imdb=' + idFilm;
         pageFilm.style.display = "block";
         document.querySelector("#app").style.display = "none";
         document.querySelector("#header").style.display = "none";
