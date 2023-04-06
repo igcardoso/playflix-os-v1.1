@@ -92,7 +92,7 @@
 
     <header id="header">
       <!-- informações do usuário-->
-      <div class="containerUser">
+      <div id="containerUser" class="containerUser">
         <div class="profile">
           <div class="user">
             <div style="border-radius: 8em; width: 100%; height: 90%; background: var(--grey);"></div>
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             
-          var profile = document.querySelector(".containerUser .profile .user");
+          var profile = document.querySelector("#containerUser .profile .user");
           var settings_profile = document.querySelector("#settings  .profile");
           var settings_name = document.querySelector("#settings .name");
           var settings_mail = document.querySelector("#settings .mail");
