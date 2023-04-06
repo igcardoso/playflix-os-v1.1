@@ -11,7 +11,7 @@
 
 #loading .loading {
   position: relative;
-  border: 2px solid #000000;
+  border: 2px solid #ffffff;
   border-radius: 8em;
   width: 30px;
   height: 30px;
@@ -25,7 +25,7 @@
   left: 5px;
   width: 6px;
   height: 6px;
-  background: #000000;
+  background: #ffffff;
   border-radius: 8em;
 }
 
