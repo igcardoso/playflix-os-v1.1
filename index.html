@@ -126,7 +126,78 @@
     </main>
   </div>
   <section id="settings">
-    
+    <!-- título da página -->
+    <div class="head-title">
+      <div class="left">
+        <h1>Ajustes</h1>
+        <ul class="breadcrumb">
+          <li>
+            <div>
+              Config.
+            </div>
+          </li>
+          <li>
+            <svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg>
+          </li>
+          <li>
+            <div class="active">
+              Conta
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- // final do título da página // -->
+    <div class="container_user">
+      <div class="profile">
+
+      </div>
+      <div class="container_info">
+        <p class="name"></p>
+        <p class="mail"></p>
+      </div>
+    </div>
+    <div class="configuration_options">
+      <p class="session_title">
+        Preferências
+      </p>
+      <button id="dark_mode">
+        <span>Modo claro</span><span><svg width="40" height="40" style="fill: var(--blue-ios) ; transform: rotate(180deg); enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M23,8H9c-4.4,0-8,3.6-8,8s3.6,8,8,8h14c4.4,0,8-3.6,8-8S27.4,8,23,8z M9,21c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5  S11.8,21,9,21z" /></svg>
+        </span>
+      </button>
+      <button style="display: none;" id="clear_mode">
+        <span>Modo claro</span>
+        <span><svg width="40" height="40" style="fill: var(--light); enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M23,8H9c-4.4,0-8,3.6-8,8s3.6,8,8,8h14c4.4,0,8-3.6,8-8S27.4,8,23,8z M9,21c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5  S11.8,21,9,21z" /></svg></span>
+      </button>
+      <button>
+        <span>Sobre</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+      <button id="privacy_policy">
+        <span>Política de privacidade</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+      <button id="terms_of_use">
+        <span>Termos de uso</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+      <button>
+        <span>Segurança</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+      <button>
+        <span>Feedback</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+      <button id="developer">
+        <span>Desenvolvedor</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+      <button onclick="logout()" id="logout">
+        <span>Sair</span>
+        <span><svg style="margin-bottom:-3px;" height="20" viewBox="0 0 18 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.2197 6.03033C11.9268 5.73744 11.9268 5.26256 12.2197 4.96967C12.5126 4.67678 12.9874 4.67678 13.2803 4.96967L17.7803 9.46967C18.0732 9.76256 18.0732 10.2374 17.7803 10.5303L13.2803 15.0303C12.9874 15.3232 12.5126 15.3232 12.2197 15.0303C11.9268 14.7374 11.9268 14.2626 12.2197 13.9697L16.1893 10L12.2197 6.03033Z" /></svg></span>
+      </button>
+    </div>
   </section>
   <script src="./scripts/index.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
