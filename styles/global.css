@@ -34,7 +34,7 @@
 }
 
 body {
-  background: #000000;
+  background: var(--grey);
 }
 
 body, button, textarea, input {
