@@ -409,7 +409,7 @@ ads_protectionBx.addEventListener("click", ()=> {
   ads_protection.classList.toggle('active');
 });
 
-var accountButton = document.querySelector("#imageUser");
+var accountButton = document.querySelector("#profile");
 var back_from_settings = document.querySelector("#back_from_settings");
 
 accountButton.addEventListener("click", ()=> {
