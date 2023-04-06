@@ -264,9 +264,9 @@ document.addEventListener("DOMContentLoaded", function () {
           profile.src = user.photoURL
           hello.innerHTML = "Olá " + user.displayName
 
-          var settings_profile = document.querySelector(".page6 .profile");
-          var settings_name = document.querySelector(".page6 .name");
-          var settings_mail = document.querySelector(".page6 .mail");
+          var settings_profile = document.querySelector("#settings  .profile");
+          var settings_name = document.querySelector("#settings .name");
+          var settings_mail = document.querySelector("#settings .mail");
 
           settings_profile.innerHTML = `<img style="background: var(--light); width: 100%;" src="${user.photoURL}" />`;
           settings_name.innerHTML = user.displayName;
