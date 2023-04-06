@@ -15,7 +15,7 @@ function getUrlMovie(movieId) {
 }
 
 document.querySelector("#channels").addEventListener("click", ()=> {
-  window.location.href = "channels.html";
+   document.querySelector("#app").style.display = "none";
 });
 
 document.querySelector(".button__menu").addEventListener("click", ()=> {
