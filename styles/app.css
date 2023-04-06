@@ -41,7 +41,7 @@
   color: var(--blue-ios);
 }
 
- .head-title {
+#settings .head-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +49,7 @@
   flex-wrap: wrap;
 }
 
- .head-title .left h1 {
+#settings .head-title .left h1 {
   font-size: 36px;
   font-weight: 600;
   margin-top: 25px;
@@ -57,7 +57,7 @@
   color: var(--dark);
 }
 
- .head-title .left p {
+#settings .head-title .left p {
   font-size: 12.5px;
   font-weight: 400;
   margin-top: 20px;
@@ -66,7 +66,7 @@
   max-width: 260px;
 }
 
- .head-title .left .breadcrumb {
+#settings .head-title .left .breadcrumb {
   display: flex;
   align-items: center;
   grid-gap: 16px;
@@ -75,17 +75,17 @@
   border-radius: var(--border-radius);
   border: 0 solid var(--grey);
 }
- .head-title .left .breadcrumb li {
+#settings .head-title .left .breadcrumb li {
   color: var(--dark);
   fill: var(--dark);
   font-weight: 400;
 }
- .head-title .left .breadcrumb li div {
+#settings .head-title .left .breadcrumb li div {
   color: var(--dark-grey);
   fill: var(--dark-grey);
   pointer-events: none;
 }
- .head-title .left .breadcrumb li div.active {
+#settings .head-title .left .breadcrumb li div.active {
   color: var(--dark);
   fill: var(--dark);
   pointer-events: unset;
