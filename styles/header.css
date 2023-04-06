@@ -15,6 +15,7 @@ header {
   background: hsla(0,0%,100%,0.082);
   webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
+  padding: 10px;
   border-radius: var(--border-radius);
   transition: .5s ease;
 }
