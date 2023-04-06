@@ -7,7 +7,6 @@
   background: #000000;
   z-index: 4000000;
   transition: .5s ease;
-  display: none;
 }
 
 #loading .loading {
@@ -32,6 +31,7 @@
 
 #labelNameUi {
   font-size: 22px;
+  font-weight: 700;
   text-align: center;
   width: 100%;
   margin-top: 10px;
