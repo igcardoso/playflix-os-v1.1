@@ -159,7 +159,7 @@
 
 #update button {
   color: #ffffff;
-  background: #329FFC;
+  background: var(--blue-ios);
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
