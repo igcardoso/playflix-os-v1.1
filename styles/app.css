@@ -37,10 +37,6 @@
   color: #000000;
 }
 
-#settings .head-title .left h1 {
-  color: var(--blue-ios);
-}
-
 #settings .head-title {
   display: flex;
   align-items: center;
