@@ -30,7 +30,6 @@ header {
   display: block;
   background: var(--primary);
   transition: all 0.6s;
-  margin: 10px;
 }
 
 .button__menu span:last-child {
