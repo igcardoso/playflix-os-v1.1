@@ -16,6 +16,7 @@ function getUrlMovie(movieId) {
 
 document.querySelector("#channels").addEventListener("click", ()=> {
    document.querySelector("#app").style.display = "none";
+   document.querySelector("#iframeChannels").style.display = "block";
 });
 
 document.querySelector(".button__menu").addEventListener("click", ()=> {
