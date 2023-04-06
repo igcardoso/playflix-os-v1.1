@@ -50,7 +50,9 @@
   font-weight: 600;
   margin-top: 25px;
   margin-bottom: 10px;
-  color: var(--blue-ios);
+  background: var(--blue-ios);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #settings .head-title .left p {
