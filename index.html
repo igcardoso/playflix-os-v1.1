@@ -252,53 +252,104 @@ document.addEventListener("DOMContentLoaded", function () {
           profile.src = user.photoURL
           hello.innerHTML = "Olá " + user.displayName
 
-          /*
+          db.collection('users').doc(user.uid).onSnapshot((doc)=> {
+            var body = document.querySelector("body");
+            var style = document.createElement("div");
+            style.innerHTML = `<style type="text/css" media="all">
+            :root {
 
-      db.collection('comunicados').onSnapshot((data)=> {
-        data.docs.map(doc => {
-          console.log("objeto:",
-            doc.data());
-          var cards = document.createElement("div");
-          cards.className = 'cards';
-          cards.innerHTML = `
-          <div class="container">
-          <div class="topEl user">
-          <img class="imgUser" src="${doc.data().photograph}" />
-          </div>
+            --poppins: 'Raleway', sans-serif;
+            --lato: 'Lato', sans-serif;
+
+            --light: ${doc.data().light};
+            --blue: ${doc.data().blue};
+            --blue-ios: #329FFC;
+            --light-blue: #CFE8FF;
+            --grey: ${doc.data().grey};
+            --dark-grey: ${doc.data().darkGrey};
+            --dark: ${doc.data().dark};
+            --inverse-dark: ${doc.data().inverseDark};
+            --red: #DB504A;
+            --yellow: #FFCE26;
+            --light-yellow: #FFF2C6;
+            --orange: #FD7238;
+            --light-orange: #FFE0D3;
+            --white: #FFFFFF;
+            --box-shadow: 0px 0px 15px #8383833e;
+            --border-radius: 1.5em;
+            }
+
+            svg {
+            fill: var(--dark);
+            }
+
+            </style>`;
+            body.appendChild(style);
+
+            if (doc.data().update == 'true') {
+              document.querySelector("#update ").style.display = "none";
+              document.querySelector("main").style.opacity = "1";
+              document.querySelector("nav").style.opacity = "1";
+            } else {
+              document.querySelector("#update ").style.display = "block";
+              document.querySelector("main").style.opacity = ".3";
+              document.querySelector("nav").style.opacity = ".3";
+            }
 
 
-          <div class="topEl text">
-          <h1 class="name">${doc.data().name}</h1>
-          <p class="date">
-          ${doc.data().date}
-          </p>
-          </div>
-          <div class="topEl icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24" style="transform: ;msFilter:;"><circle cx="18" cy="6" r="3"></circle><path d="M18 19H5V6h8c0-.712.153-1.387.422-2H5c-1.103 0-2 .897-2 2v13c0 1.103.897 2 2 2h13c1.103 0 2-.897 2-2v-8.422A4.962 4.962 0 0 1 18 11v8z"></path></svg>
-          </div>
-          </div>
-          <div class="message">
-          ${doc.data().message}
-          </div>
-          <div class="adms">
-          <img class="img1" src="images/user_01.jpg" />
-          <img class="img2" src="images/user_02.jpg" />
-          <img class="img3" src="images/user_03.jpg" />
-          <img class="img4" src="images/user_04.jpg" />
-          <a style="text-decoration: none;" href="https://wa.me/55${doc.data().contact}?text=Oi,%20gostaria%20de%20reportar%20um%20erro%20ou%20fazer uma sugestão" class="text" id="support">
-          responder a ${doc.data().name}
-          </a>
-          </div>`;
+            return doc.data();
+          });
+
+          document.querySelector("#start_update").addEventListener("click",
+            ()=> {
+              var users = firebase.firestore().collection('users');
+
+              users.doc(user.uid).set({
+                name: user.displayName,
+                photograph: user.photoURL,
+                light: '#EFEFEF',
+                blue: '#ffffff',
+                grey: '#F9F9F9',
+                darkGrey: '#000000',
+                dark: '#000000',
+                inverseDark: '#c5c5c5',
+                update: 'true'
+              });
+            });
 
 
-          // *******************************
+          // página de ajustes
 
-          document.querySelector("#containment-card-notifications").appendChild(cards);
+          var clear_mode = document.querySelector("#clear_mode");
+          var dark_mode = document.querySelector("#dark_mode");
 
-          return doc.data();
-        });
-      })
-      */
+          clear_mode.addEventListener("click",
+            ()=> {
+              clear_mode.style.display = "none";
+              dark_mode.style.display = "flex";
+              db.collection('users').doc(user.uid).update({
+                light: '#EFEFEF',
+                blue: '#ffffff',
+                grey: '#F9F9F9',
+                darkGrey: '##000000',
+                dark: '#000000',
+                inverseDark: '#c5c5c5'
+              });
+            });
+
+          dark_mode.addEventListener("click",
+            ()=> {
+              dark_mode.style.display = "none";
+              clear_mode.style.display = "flex";
+              db.collection('users').doc(user.uid).update({
+                light: '#3838387c',
+                blue: '#000000',
+                grey: '#000000',
+                darkGrey: '#ffffff',
+                dark: '#ffffff',
+                inverseDark: '#f8f8f87f'
+              });
+            });
 
         } else {
           var provider = new firebase.auth.GoogleAuthProvider();
