@@ -239,6 +239,14 @@ async function getMovieData(movieId) {
 
 function loadMovies() {
   const LIST_MOVIES = [
+    'tt11734264',
+    'tt0111161',
+    'tt0068646',
+    'tt0468569',
+    'tt2119532',
+    'tt0974015',
+    'tt2975590',
+    'tt12361974',
     'tt0421715',
     'tt1964418',
     'tt7613162',
