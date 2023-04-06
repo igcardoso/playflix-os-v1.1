@@ -408,3 +408,10 @@ ads_protectionBx.addEventListener("click", ()=> {
   document.querySelector(".button__menu").classList.toggle('active');
   ads_protection.classList.toggle('active');
 });
+
+var accountButton = document.querySelector("#imageUser");
+
+accountButton.addEventListener("click", ()=> {
+  document.querySelector("#settings").style.display = "block"
+  document.querySelector("#app").style.display = "none"
+});
