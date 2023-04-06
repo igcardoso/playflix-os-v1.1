@@ -194,7 +194,7 @@
 }
 
 #settings .configuration_options {
-  width: calc(100% + 20px);
+  width: calc(100% + 10px);
   display: flex;
   flex-direction: column;
   margin-left: -10px;
