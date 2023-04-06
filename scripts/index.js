@@ -410,8 +410,14 @@ ads_protectionBx.addEventListener("click", ()=> {
 });
 
 var accountButton = document.querySelector("#imageUser");
+var back_from_settings = document.querySelector("#back_from_settings");
 
 accountButton.addEventListener("click", ()=> {
   document.querySelector("#settings").style.display = "block"
   document.querySelector("#app").style.display = "none"
+});
+
+back_from_settings.addEventListener("click", ()=> {
+  document.querySelector("#settings").style.display = "none"
+  document.querySelector("#app").style.display = "flex"
 });
