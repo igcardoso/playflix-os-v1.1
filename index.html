@@ -286,6 +286,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       auth.onAuthStateChanged(user => {
         if (user) {
+
+          db.collection('loading').doc('global').onSnapshot((doc)=> {
+
+            if (doc.data().status == 'true') {
+              setTimeout(function() {
+                document.querySelector(".loading").style.left = "-1000%";
+              }, 1000);
+            }
+          });
           var hello = document.querySelector("#hello");
 
           hello.innerHTML = "Olá " + user.displayName
