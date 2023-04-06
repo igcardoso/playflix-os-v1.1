@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (doc.data().status == 'true') {
               setTimeout(function() {
-                document.querySelector("#loading").style.left = "-100%";
+                document.querySelector("#loading").style.display = "none";
               }, 1000);
             }
           });
