@@ -53,9 +53,9 @@ function setMainMovie(movie) {
       var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
       var marker_contention = document.querySelector("#pageFilm  .marker_contention");
 
-      loading.style.left = "0";
+      loading.style.display = "block";
       setTimeout(function() {
-        loading.style.left = "-100%";
+        loading.style.display = "none";
         marker_contention.addEventListener("click", ()=> {
           orientation_alert.style.transform = "translateY(-100%)";
           document.querySelector(".orientation_video").pause();
@@ -88,9 +88,9 @@ function setMainMovie(movie) {
       var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
       var marker_contention = document.querySelector("#pageFilm  .marker_contention");
 
-      loading.style.left = "0";
+      loading.style.display = "block";
       setTimeout(function() {
-        loading.style.left = "-100%";
+        loading.style.display = "none";
         marker_contention.addEventListener("click", ()=> {
           orientation_alert.style.transform = "translateY(-100%)";
           document.querySelector(".orientation_video").pause();
@@ -117,9 +117,9 @@ function setMainMovie(movie) {
       }, 500);
     });
 
-    loading.style.left = "0";
+    loading.style.display = "block";
     setTimeout(function() {
-      loading.style.left = "-100%";
+      loading.style.display = "none";
 
       backPageSelect.addEventListener("click", ()=> {
         select__player.style.display = "none";
