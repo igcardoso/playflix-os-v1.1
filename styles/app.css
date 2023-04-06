@@ -31,14 +31,10 @@
 }
 
 #labelNameUi {
-  font-size: 22px;
-  font-weight: 700;
   text-align: center;
   width: 100%;
   margin-top: 10px;
-  background: var(--blue-ios);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .containerUser {
