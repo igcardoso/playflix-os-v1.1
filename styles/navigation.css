@@ -6,6 +6,7 @@
   height: 100%;
   padding: 66px 80px 32px 54px;
   background: hsla(0,0%,100%,0.084);
+  webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   transition: all 0.6s;
   overflow: auto;
@@ -30,6 +31,7 @@
   margin-top: 20px;
   width: 100%;
   background: hsla(0,0%,100%,0.084);
+  webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   display: flex;
   flex-direction: row;
