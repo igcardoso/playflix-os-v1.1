@@ -291,9 +291,15 @@ document.addEventListener("DOMContentLoaded", function () {
           db.collection('loading').doc('global').onSnapshot((doc)=> {
 
             if (doc.data().status == 'true') {
+              var loadingPoint = document.querySelector("#loading .point"); 
+              loadingPoint.style.opacity = "0";
+              loadingPoint.style.top = "-20px";
+              
+              document.querySelector("#labelNameUi").innerHTML = "Bem Vindo, " + user.displayName
+              
               setTimeout(function() {
                 document.querySelector("#loading").style.display = "none";
-              }, 1000);
+              }, 3000);
             }
           });
           var hello = document.querySelector("#hello");
