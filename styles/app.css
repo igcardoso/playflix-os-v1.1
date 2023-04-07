@@ -27,6 +27,7 @@
   height: 6px;
   background: #ffffff;
   border-radius: 8em;
+  transition: 1.5s ease;
 }
 
 #labelNameUi {
@@ -34,6 +35,7 @@
   width: 100%;
   margin-top: 10px;
   color: #ffffff;
+  transition: 1.5s ease;
 }
 
 .containerUser {
