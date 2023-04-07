@@ -94,11 +94,11 @@
       height: 100%;
       z-index: -1;
     }
-    
+
     .movie {
       background-image: linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, rgb(0,0,0) 100%);
     }
-    
+
     .movie .contantName {
       margin: auto;
       background: #ffffff;
@@ -148,9 +148,14 @@
 
   <header id="header">
     <span type="button" class="button__menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M3 4.5H21" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+        <path d="M11.53 9.5H21" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3 14.5H21" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M11.53 19.5H21" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
     </span>
 
     <nav id="navigation" class="navigation">
@@ -247,7 +252,7 @@
         var contantNameChannel = document.createElement("span");
         contantNameChannel.className = "contantName";
         channel.appendChild(contantNameChannel);
-        
+
         var nameChannel = document.createElement("h1");
         nameChannel.innerHTML = `${doc.data().name}`;
         contantNameChannel.appendChild(nameChannel);
