@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (doc.data().status == 'true') {
               var loadingPoint = document.querySelector("#loading .point");
               loadingPoint.style.opacity = "0";
-              loadingPoint.style.top = "-20px";
+              document.querySelector("#loading .loading").style.top = "-20px";
               document.querySelector("#loading .loading").style.border = "none";
               document.querySelector("#loading .loading").style.animation = "none";
               
