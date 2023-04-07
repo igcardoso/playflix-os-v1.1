@@ -299,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
               var loadingPoint = document.querySelector("#loading .point");
               loadingPoint.style.opacity = "0";
               loadingPoint.style.top = "-20px";
+              document.querySelector("").style.border = "none";
 
               var labelNameUi = document.querySelector("#labelNameUi");
               labelNameUi.innerHTML = "Bem Vindo, " + "<br />" + user.displayName
