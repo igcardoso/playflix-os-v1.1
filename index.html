@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
               loadingPoint.style.top = "-20px";
               
               var labelNameUi = document.querySelector("#labelNameUi");
-              labelNameUi.innerHTML = "Bem Vindo, " + user.displayName
+              labelNameUi.innerHTML = "Bem Vindo, " + "<br />" + user.displayName
               
               setTimeout(function() {
                 document.querySelector("#loading").style.display = "none";
