@@ -295,7 +295,10 @@ document.addEventListener("DOMContentLoaded", function () {
               loadingPoint.style.opacity = "0";
               loadingPoint.style.top = "-20px";
               
-              document.querySelector("#labelNameUi").innerHTML = "Bem Vindo, " + user.displayName
+              var labelNameUi = document.querySelector("#labelNameUi");
+              labelNameUi.innerHTML = "Bem Vindo, " + user.displayName
+              labelNameUi.style.fontSize = "21px";
+              labelNameUi.style.fontSize = "21px";
               
               setTimeout(function() {
                 document.querySelector("#loading").style.display = "none";
