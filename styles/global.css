@@ -31,7 +31,7 @@
 :root {
   --primary: #fff;
 
-  --blue-ios: linear-gradient(-154.23deg, rgb(123,15,15) -58.45%, rgb(255,0,0);
+  --blue-ios: linear-gradient(-154.23deg, rgb(123,15,15) -58.45%, rgb(255,0,0));
 }
 
 body {
