@@ -557,6 +557,6 @@ main {
   }
 
   .app__image::after {
-    background: linear-gradient(90.18deg, rgba(0,0,0,0.732) 30%, rgba(0,0,0,0.2) 96.69%);
+    background: linear-gradient(90.18deg, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.2) 96.69%);
   }
 }
