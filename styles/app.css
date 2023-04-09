@@ -495,7 +495,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90.18deg, rgb(0,0,0) 23.21%, rgba(0,0,0,0) 96.69%);
+  background: linear-gradient(90.18deg, rgba(0,0,0,0.724) 23.21%, rgba(0,0,0,0) 96.69%);
 }
 
 .app__image img {
@@ -557,6 +557,6 @@ main {
   }
 
   .app__image::after {
-    background: linear-gradient(90.18deg, rgb(0,0,0) 30%, rgba(0,0,0,0.2) 96.69%);
+    background: linear-gradient(90.18deg, rgba(0,0,0,0.732) 30%, rgba(0,0,0,0.2) 96.69%);
   }
 }
