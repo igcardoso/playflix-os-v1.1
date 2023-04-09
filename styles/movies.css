@@ -75,6 +75,7 @@
 }
 
 .movie.active-movie {
+  transform: scale(1.1);
   border: 3px solid #ffffff;
 }
 
