@@ -58,6 +58,7 @@
 .movie:hover button {
   opacity: 1;
   transform: translateY(0);
+  z-index: 1000;
 }
 
 .movie:hover .movie__image {
