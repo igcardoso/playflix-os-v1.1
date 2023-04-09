@@ -62,7 +62,7 @@
 }
 
 .movie:hover .movie__image {
-  filter: blur(15px);
+  filter: blur(8px);
 }
 
 .movie__image {
