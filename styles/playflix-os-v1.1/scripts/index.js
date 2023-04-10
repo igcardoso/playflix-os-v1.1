@@ -15,7 +15,8 @@ function getUrlMovie(movieId) {
 }
 
 document.querySelector("#channels").addEventListener("click", ()=> {
-  window.location.href = "channels.html";
+   document.querySelector("#app").style.display = "none";
+   document.querySelector("#iframeChannels").style.display = "block";
 });
 
 document.querySelector(".button__menu").addEventListener("click", ()=> {
@@ -53,9 +54,9 @@ function setMainMovie(movie) {
       var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
       var marker_contention = document.querySelector("#pageFilm  .marker_contention");
 
-      loading.style.left = "0";
+      loading.style.display = "block";
       setTimeout(function() {
-        loading.style.left = "-100%";
+        loading.style.display = "none";
         marker_contention.addEventListener("click", ()=> {
           orientation_alert.style.transform = "translateY(-100%)";
           document.querySelector(".orientation_video").pause();
@@ -88,9 +89,9 @@ function setMainMovie(movie) {
       var orientation_alert = document.querySelector("#pageFilm  .orientation_alert");
       var marker_contention = document.querySelector("#pageFilm  .marker_contention");
 
-      loading.style.left = "0";
+      loading.style.display = "block";
       setTimeout(function() {
-        loading.style.left = "-100%";
+        loading.style.display = "none";
         marker_contention.addEventListener("click", ()=> {
           orientation_alert.style.transform = "translateY(-100%)";
           document.querySelector(".orientation_video").pause();
@@ -117,9 +118,9 @@ function setMainMovie(movie) {
       }, 500);
     });
 
-    loading.style.left = "0";
+    loading.style.display = "block";
     setTimeout(function() {
-      loading.style.left = "-100%";
+      loading.style.display = "none";
 
       backPageSelect.addEventListener("click", ()=> {
         select__player.style.display = "none";
@@ -239,6 +240,104 @@ async function getMovieData(movieId) {
 
 function loadMovies() {
   const LIST_MOVIES = [
+    'tt6723592',
+    'tt5034838',
+    'tt0499097', 
+    'tt5109280',
+    'tt6139732',
+    'tt1634106',
+    'tt0094898',
+    'tt6802400',
+    'tt0087332',
+    'tt4513678',
+    'tt7556122',
+    'tt13833688',
+    'tt2560092',
+    'tt11145118',
+    'tt6343314',
+    'tt3076658',
+    'tt14927188',
+    'tt13634480',
+    'tt3416828',
+    'tt1667889',
+    'tt1080016',
+    'tt0438097',
+    'tt0268380',
+    'tt6598238',
+    'tt4566758',
+    'tt0499549',
+    'tt9376612',
+    'tt2527338',
+    'tt2527336',
+    'tt3748528',
+    'tt2488496',
+    'tt0121766',
+    'tt0121765',
+    'tt0120915',
+    'tt0086190',
+    'tt0080684',
+    'tt0076759',
+    'tt10234724',
+    'tt9362930',
+    'tt8110640',
+    'tt1270797',
+    'tt7097896',
+    'tt0800080',
+    'tt0145487',
+    'tt4633694',
+    'tt10872600',
+    'tt9362722',
+    'tt0413300',
+    'tt0316654',
+    'tt2250912',
+    'tt6320628',
+    'tt0948470',
+    'tt1872181',
+    'tt1431045',
+    'tt5463162',
+    'tt1133985',
+    'tt6264654',
+    'tt2463208',
+    'tt2798920',
+    'tt0816692',
+    'tt0398808',
+    'tt0363771',
+    'tt0499448',
+    'tt0980970',
+    'tt0983193',
+    'tt0451279',
+    'tt7126948',
+    'tt8332922',
+    'tt1477834',
+    'tt6644200',
+    'tt0458339',
+    'tt4154664',
+    'tt3498820',
+    'tt1843866',
+    'tt2395427',
+    'tt1211837',
+    'tt3480822',
+    'tt0371746',
+    'tt7713068',
+    'tt1386697',
+    'tt1228705',
+    'tt1300854',
+    'tt0770828',
+    'tt4154756',
+    'tt4154796',
+    'tt11734264',
+    'tt0111161',
+    'tt0068646',
+    'tt0468569',
+    'tt2119532',
+    'tt0974015',
+    'tt2975590',
+    'tt12361974',
+    'tt0421715',
+    'tt1964418',
+    'tt7613162',
+    'tt0485947',
+    'tt1305591',
     'tt5085522',
     'tt15255288',
     'tt3915174',
@@ -283,7 +382,6 @@ function loadMovies() {
     'tt1386697',
     'tt1630029',
     'tt12801262',
-    'tt9376612',
     'tt14641788',
     'tt7846844',
     'tt1051906',
@@ -351,4 +449,17 @@ var ads_protectionBx = document.querySelector("#ads_protectionBx");
 ads_protectionBx.addEventListener("click", ()=> {
   document.querySelector(".button__menu").classList.toggle('active');
   ads_protection.classList.toggle('active');
+});
+
+var accountButton = document.querySelector("#profile");
+var back_from_settings = document.querySelector("#back_from_settings");
+
+accountButton.addEventListener("click", ()=> {
+  document.querySelector("#settings").style.display = "block"
+  document.querySelector("#app").style.display = "none"
+});
+
+back_from_settings.addEventListener("click", ()=> {
+  document.querySelector("#settings").style.display = "none"
+  document.querySelector("#app").style.display = "flex"
 });
