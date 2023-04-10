@@ -198,7 +198,7 @@ function addMovieInList(movie) {
   movieElement.setAttribute('id', movie.id);
 
   const genre = `<span>${movie.genre}</span>`;
-  const title = `<strong>${movie.title}</strong>`;
+  const title = `<strong>${movie.id}</strong>`;
 
   movieElement.innerHTML = genre + title
   movieElement.appendChild(createButtonMovie(movie.id))
