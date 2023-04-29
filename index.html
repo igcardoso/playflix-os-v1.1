@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
 */
     window.onload = function() {
 
-      auth.onAuthStateChanged(user => {
+      auth.onAuthStateChanged(user ()=> {
         if (user) {
 
           db.collection('loading').doc('global').onSnapshot((doc)=> {
