@@ -60,23 +60,8 @@
   padding: 2px;
 }
 
-.profile .user {
-  padding-left: 5%;
-  padding-top: 5%;
-  padding-bottom: 0;
-  width: 67px;
-  height: 100%;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-.profile .user img {
-  height: 90%;
-  border-radius: var(--border-radius);
-}
-
 .profile .icon {
-  width: 90%;
+  width: 80%;
   display: flex;
   padding-right: 5%;
   padding-top: 5%;
