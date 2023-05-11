@@ -30,6 +30,32 @@
   <meta name="apple-mobile-web-app-status-bar" content="#000000">
   <meta name="theme-color" content="#000000">
   <title>Playflix OS</title>
+  <style type="text/css" media="all">
+:root {
+
+    --poppins: 'Raleway', sans-serif;
+    --lato: 'Lato', sans-serif;
+    --light: #EFEFEF;
+    --blue: #ffffff;
+    --light-blue: #CFE8FF;
+    --grey: #F9F9F9;
+    --dark-grey: #000000;
+    --dark: #000000;
+    --inverse-dark: #c5c5c5;
+    --red: #DB504A;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+    --white: #FFFFFF;
+    --box-shadow: 0px 0px 15px #8383833e;
+    --border-radius: 1.5em;
+  }
+
+    svg {
+      fill: var(--dark);
+    }
+  </style>
 </head>
 <body>
   <!-- popup de atualização -->
@@ -253,214 +279,6 @@
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/3.5.1/firebase-ui-auth__pt.js"></script>
   <script type="text/javascript" charset="utf-8">
-
-    var config = {
-      apiKey: "AIzaSyCr_gBGRcwqdr3CPz22eRWRB_EMJwl-O78I",
-      authDomain: "playflix-os-8827c.firebaseapp.com",
-      projectId: "playflix-os-8827c",
-      storageBucket: "playflix-os-8827c.appspot.com",
-      messagingSenderId: "998635081236",
-      appId: "1:998635081236:web:cce5fce7996c2808d1e101",
-      measurementId: "G-WPG0NSGNYV"
-    };
-
-    firebase.initializeApp(config);
-    // Apenas para remover um warning
-    firebase.firestore().settings({
-      timestampsInSnapshots: true,
-
-    });
-
-    const db = firebase.firestore()
-    const auth = firebase.auth()
-
-    function logout() {
-      // Faço um logout do meu usuário (saio da aplicação).
-      firebase.auth().signOut().then(() => {
-        alert('Usuário deslogou');
-      })
-    }
-
-    /**
-    * Listener de dom ready
-    */
-    /*
-document.addEventListener("DOMContentLoaded", function () {
-})
-*/
-    window.onload = function() {
-
-      auth.onAuthStateChanged(user ()=> {
-        if (user) {
-
-          db.collection('loading').doc('global').onSnapshot((doc)=> {
-
-            if (doc.data().status == 'true') {
-              var loadingPoint = document.querySelector("#loading .point");
-              loadingPoint.style.opacity = "0";
-              document.querySelector("#loading .loading").style.top = "-20px";
-              document.querySelector("#loading .loading").style.border = "none";
-              document.querySelector("#loading .loading").style.animation = "none";
-
-              document.querySelector("#loading_check").style.display = "block";
-
-              var labelNameUi = document.querySelector("#labelNameUi");
-              labelNameUi.innerHTML = "Bem Vindo, " + "<br />" + user.displayName
-
-              setTimeout(function() {
-                document.querySelector("#loading").style.display = "none";
-                var loadingPoint = document.querySelector("#loading .point");
-                loadingPoint.style.opacity = "1";
-                document.querySelector("#loading .loading").style.top = "5px";
-                document.querySelector("#loading .loading").style.border = "2px solid #ffffff";
-                document.querySelector("#loading .loading").style.animation = "spiner.9s linear infinite";
-
-                document.querySelector("#loading_check").style.display = "none";
-
-                var labelNameUi = document.querySelector("#labelNameUi");
-                labelNameUi.innerHTML = "Aguarde..."
-              }, 2000);
-            }
-          });
-          var hello = document.querySelector("#hello");
-
-          hello.innerHTML = "Olá " + user.displayName
-
-          db.collection('users').doc(user.uid).onSnapshot((doc)=> {
-            var body = document.querySelector("body");
-            var style = document.createElement("div");
-            style.innerHTML = `<style type="text/css" media="all">
-            :root {
-
-            --poppins: 'Raleway', sans-serif;
-            --lato: 'Lato', sans-serif;
-            --light: #EFEFEF;
-            --blue: #ffffff;
-            --light-blue: #CFE8FF;
-            --grey: #F9F9F9;
-            --dark-grey: #000000;
-            --dark: #000000;
-            --inverse-dark: #c5c5c5;
-            --red: #DB504A;
-            --yellow: #FFCE26;
-            --light-yellow: #FFF2C6;
-            --orange: #FD7238;
-            --light-orange: #FFE0D3;
-            --white: #FFFFFF;
-            --box-shadow: 0px 0px 15px #8383833e;
-            --border-radius: 1.5em;
-            }
-
-            svg {
-            fill: var(--dark);
-            }
-
-            </style>`;
-            body.appendChild(style);
-
-            if (doc.data().update == 'true') {
-              document.querySelector("#update ").style.display = "none";
-              document.querySelector("main").style.opacity = "1";
-              document.querySelector("nav").style.opacity = "1";
-            } else {
-              document.querySelector("#update ").style.display = "block";
-              document.querySelector("main").style.opacity = ".3";
-              document.querySelector("nav").style.opacity = ".3";
-            }
-
-
-            return doc.data();
-          });
-
-          document.querySelector("#start_update").addEventListener("click",
-            ()=> {
-              var users = firebase.firestore().collection('users');
-
-              users.doc(user.uid).set({
-                name: user.displayName,
-                photograph: user.photoURL,
-                light: '#EFEFEF',
-                blue: '#ffffff',
-                grey: '#F9F9F9',
-                darkGrey: '#000000',
-                dark: '#000000',
-                inverseDark: '#c5c5c5',
-                update: 'true'
-              });
-            });
-
-          var profile = document.querySelector("#containerUser .profile .user");
-          var settings_profile = document.querySelector("#settings  .profile");
-          var settings_name = document.querySelector("#settings .name");
-          var settings_mail = document.querySelector("#settings .mail");
-
-
-          profile.innerHTML = `<img style="background: var(--light); width: 100%;" src="${user.photoURL}" />`;
-          settings_profile.innerHTML = `<img style="background: var(--light); width: 100%;" src="${user.photoURL}" />`;
-          settings_name.innerHTML = user.displayName;
-          settings_mail.innerHTML = user.email;
-
-
-
-          // página de ajustes
-
-          var clear_mode = document.querySelector("#clear_mode");
-          var dark_mode = document.querySelector("#dark_mode");
-
-          clear_mode.addEventListener("click",
-            ()=> {
-              clear_mode.style.display = "none";
-              dark_mode.style.display = "flex";
-              db.collection('users').doc(user.uid).update({
-                light: '#EFEFEF',
-                blue: '#ffffff',
-                grey: '#F9F9F9',
-                darkGrey: '##000000',
-                dark: '#000000',
-                inverseDark: '#c5c5c5'
-              });
-            });
-
-          dark_mode.addEventListener("click",
-            ()=> {
-              dark_mode.style.display = "none";
-              clear_mode.style.display = "flex";
-              db.collection('users').doc(user.uid).update({
-                light: '#3838387c',
-                blue: '#000000',
-                grey: '#000000',
-                darkGrey: '#ffffff',
-                dark: '#ffffff',
-                inverseDark: '#f8f8f87f'
-              });
-            });
-
-        } else {
-          var provider = new firebase.auth.GoogleAuthProvider();
-
-          firebase.auth().signInWithRedirect(provider).then(resposta => {
-            if (resposta.credential) {
-              const token = resposta.credential.accessToken;
-            }
-            const user = resposta.user;
-          }).catch(error => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.email;
-            const credential = error.credential;
-          });
-        }
-      });
-    };
-
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function() {
-        navigator.serviceWorker
-        .register("serviceWorker.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err));
-      });
-    }
   </script>
 </body>
 </html>
