@@ -15,8 +15,9 @@ function getUrlMovie(movieId) {
 }
 
 document.querySelector("#channels").addEventListener("click", ()=> {
-  document.querySelector("#app").style.display = "none";
-  document.querySelector("#iframeChannels").style.display = "block";
+ // document.querySelector("#app").style.display = "none";
+ // document.querySelector("#iframeChannels").style.display = "block";
+ window.alert("Não é possível acessar os canais, desculpe pelo inconveniente, algumas funcionalidades estão passando por reparos, aproveite os filmes.")
 });
 
 document.querySelector(".button__menu").addEventListener("click", ()=> {
