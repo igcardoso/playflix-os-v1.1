@@ -47,7 +47,12 @@ function setMainMovie(movie) {
     var locationMovies = document.querySelector("#iframe");
     var select__player1 = document.querySelector("#select1");
     var select__player2 = document.querySelector("#select2");
-
+    
+    setTimeout(function() {
+      loading.style.display = "none";
+      document.getElementById("labelNameUi").innerHTML = "Aguarde...";
+    }, 
+    2000);
 
     select__player1.addEventListener("click", ()=> {
       document.querySelector(".orientation_video").play();
