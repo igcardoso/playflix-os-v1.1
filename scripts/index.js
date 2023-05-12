@@ -15,8 +15,8 @@ function getUrlMovie(movieId) {
 }
 
 document.querySelector("#channels").addEventListener("click", ()=> {
-   document.querySelector("#app").style.display = "none";
-   document.querySelector("#iframeChannels").style.display = "block";
+  document.querySelector("#app").style.display = "none";
+  document.querySelector("#iframeChannels").style.display = "block";
 });
 
 document.querySelector(".button__menu").addEventListener("click", ()=> {
@@ -25,6 +25,13 @@ document.querySelector(".button__menu").addEventListener("click", ()=> {
 
   navigation.classList.toggle('active');
 });
+
+
+setTimeout(function() {
+  loading.style.display = "none";
+  document.getElementById("labelNameUi").innerHTML = "Aguarde...";
+},
+  2000);
 
 function setMainMovie(movie) {
   const appImage = document.querySelector('.app__image img');
@@ -47,12 +54,7 @@ function setMainMovie(movie) {
     var locationMovies = document.querySelector("#iframe");
     var select__player1 = document.querySelector("#select1");
     var select__player2 = document.querySelector("#select2");
-    
-    setTimeout(function() {
-      loading.style.display = "none";
-      document.getElementById("labelNameUi").innerHTML = "Aguarde...";
-    }, 
-    2000);
+
 
     select__player1.addEventListener("click", ()=> {
       document.querySelector(".orientation_video").play();
@@ -87,7 +89,7 @@ function setMainMovie(movie) {
         select__player.style.display = "none";
       }, 500);
     });
-    
+
     // Segunda seleção de player
     select__player2.addEventListener("click", ()=> {
       document.querySelector(".orientation_video").play();
@@ -245,9 +247,9 @@ async function getMovieData(movieId) {
 
 function loadMovies() {
   const LIST_MOVIES = [
-    'tt6723592', 
-    'tt5034838', 
-    'tt0499097', 
+    'tt6723592',
+    'tt5034838',
+    'tt0499097',
     'tt5109280',
     'tt6139732',
     'tt1634106',
