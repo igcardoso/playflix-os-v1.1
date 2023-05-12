@@ -141,6 +141,7 @@
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
   text-align: center;
+  /*display: none;*/
 }
 
 #update button {
@@ -175,7 +176,7 @@
 
 #update .marcador div {
   height: 2px;
-  background: #000000;
+  background: #ffffff;
   margin: 2px auto;
   border-radius: 1.5em;
 }
