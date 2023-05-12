@@ -141,7 +141,7 @@
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
   text-align: center;
-  /*display: none;*/
+  display: none;
 }
 
 #update button {
