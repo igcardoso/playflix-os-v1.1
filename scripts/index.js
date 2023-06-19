@@ -11,7 +11,7 @@ const moviesElement = document.getElementById('movies');
 const moviesElement2 = document.getElementById('movies2');
 
 function getUrlMovie(movieId) {
-  return `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=${API_LANGUAGE}`;
+  return `https://api.themoviedb.org/3/tv/${movieId}?api_key=${API_KEY}&language=${API_LANGUAGE}`;
 }
 
 document.querySelector("#channels").addEventListener("click", ()=> {
