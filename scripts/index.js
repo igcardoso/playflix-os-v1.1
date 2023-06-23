@@ -116,7 +116,7 @@ function setMainMovie(movie) {
           document.querySelector("#main").style.display = "flex";
           select__player.style.display = "block";
         });
-        locationMovies.src = 'https://playerhd.org/video/playtelona.php?id=' + idFilm;
+        locationMovies.src = 'https://embedder.net/e/' + idFilm;
         pageFilm.style.display = "block";
         document.querySelector("#app").style.display = "none";
         document.querySelector("#header").style.display = "none";
