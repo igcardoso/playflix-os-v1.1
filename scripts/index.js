@@ -15,9 +15,9 @@ function getUrlMovie(movieId) {
 }
 
 document.querySelector("#channels").addEventListener("click", ()=> {
- // document.querySelector("#app").style.display = "none";
- // document.querySelector("#iframeChannels").style.display = "block";
- window.alert("Não é possível acessar os canais, desculpe pelo inconveniente, algumas funcionalidades estão passando por reparos, aproveite os filmes.")
+  // document.querySelector("#app").style.display = "none";
+  // document.querySelector("#iframeChannels").style.display = "block";
+  window.alert("Não é possível acessar os canais, desculpe pelo inconveniente, algumas funcionalidades estão passando por reparos, aproveite os filmes.")
 });
 
 document.querySelector(".button__menu").addEventListener("click", ()=> {
@@ -56,6 +56,17 @@ function setMainMovie(movie) {
     var select__player1 = document.querySelector("#select1");
     var select__player2 = document.querySelector("#select2");
 
+    // Adiciona um ouvinte de eventos 'load' para garantir que o <iframe> esteja completamente carregado
+    locationMovies.addEventListener('load', function() {
+      // Adiciona um ouvinte de eventos 'error' ao objeto 'window' dentro do <iframe>
+      locationMovies.contentWindow.addEventListener('error', function(event) {
+        // Captura o erro
+        var error = event.error;
+
+        // Exibe o erro no console
+        window.alert('Erro dentro do <iframe>:', error);
+      });
+    });
 
     select__player1.addEventListener("click", ()=> {
       document.querySelector(".orientation_video").play();
