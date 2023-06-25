@@ -116,7 +116,7 @@ function setMainMovie(movie) {
           document.querySelector("#main").style.display = "flex";
           select__player.style.display = "block";
         });
-        locationMovies.src = 'https://embedder.net/e/' + idFilm;
+        locationMovies.src = 'https://embedflix.net/filme/' + idFilm;
         pageFilm.style.display = "block";
         document.querySelector("#app").style.display = "none";
         document.querySelector("#header").style.display = "none";
